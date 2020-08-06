@@ -1,0 +1,72 @@
+
+
+@media only screen and (max-width: 767px) {
+    .navigation .navbar-brand {
+        font-size: 20px;
+        margin: 0;
+        padding: 0 1rem;
+    }
+
+    .front-cover .text-cover {
+        margin: 0;
+        font-size: 20px;
+        text-align: left;
+    }
+    .front-cover .text-cover {
+        margin: 1.6rem 0.2rem;
+        padding: 0;
+    }
+    }
+
+/* Navigation */
+.navbar {
+    background-color: transparent;
+    padding: 1rem 0;
+}
+.navbar-dark .navbar-nav .nav-link {
+    font-size: 20px;
+    margin-right: 1rem;
+    color: white;
+    text-space: 1px;
+    letter-spacing: 2px;
+}
+.navbar-dark:hover .navbar-nav:hover .nav-link:hover {
+    color: #c1a445;
+}
+.navbar-toggler {
+    background-color: dimgrey;
+}
+.navbar-brand {
+    font-size: 30px;
+    padding-left: 3rem;
+    letter-spacing: 2px;
+}
+
+/*  Main Page */
+.background-mainPage {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    max-width: 100%;
+}
+
+.text-cover {
+    font-size: 40px;
+    font-weight: 300;
+    color: white;
+    margin: 4rem 2rem 0;
+    background-color: transparent;
+    border: none;
+}
+.text-cover:hover {
+    color: white;
+    background-color: #c1a445;
+}
+
+/*  section Main Map */
+h2 {
+    margin: 5rem 0;
+    text-align: center;
+}
