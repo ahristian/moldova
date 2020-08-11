@@ -13,7 +13,7 @@ export const NavigationBar = () => {
           <Nav className="justify-content-start">
             <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/destinations">Destinations</Nav.Link>
-            <Nav.Link href="/foodWine">Food and Wine</Nav.Link>
+            <Nav.Link href="/foodWine">Food</Nav.Link>
             <Nav.Link href="/traditions">Traditions</Nav.Link>
           </Nav>
         </Navbar.Collapse>

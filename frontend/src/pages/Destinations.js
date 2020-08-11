@@ -22,11 +22,11 @@ export const Destinations = () => {
         </Row>
       </Container>
       </section>
-        <section className="cardSection">
+        <section className="destinationCard mx-2">
         <Container>
           <Row>
             <Col>
-              <Card style={{ width: '18rem' }}>
+              <Card style={{ width: '16rem' }}>
                 <Card.Img variant="top" src={Dedrarium} />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>

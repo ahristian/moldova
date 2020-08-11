@@ -11,16 +11,38 @@ import chisinau from '../shared/images/chisinau.jpg'
 import Card from 'react-bootstrap/Card'
 import { Link } from 'react-router-dom'
 
+import soroca from '../shared/images/soroca.jpg'
+import grapes from '../shared/images/grapes.jpg'
+import background from '../shared/images/background.jpg'
+import moldovaSkies from '../shared/images/moldova-de-la-inaltimea.jpg'
+import tighina from '../shared/images/tighina.jpg'
+import orheiVechi from '../shared/images/orheiVechi.png'
+import someWhereMoldova from '../shared/images/somewhereMoldova.jpg'
+
+function randomScreen () {
+let images = [soroca,
+  grapes,
+  moldovaSkies,
+  background,
+  tighina,
+  orheiVechi,
+  someWhereMoldova];
+setInterval(function () {
+  document.getElementsByClassName('bg-img')[0].setAttribute('style', 'background-image: url("' + images[0] + '")');
+  images.splice(images.length, 0, images[0]);
+  images.splice(0, 1);
+}, 8000)
+  }
+
 export const Home = () => {
   return (
     <>
-      <header>
-        <Container className="background-mainPage" >
+        <header onLoad={randomScreen()} >
+
+          <Container fluid className="bg-img" style={{backgroundImage: "url(" + background + ")"}}>
           <Row className="py-2">
             <Col md={{span: 8, offset: 4}} sm={4}>
-
               <Button href="#idMoldova" variant="outline-transparent text-cover text-center">Where is Moldova?</Button>
-
             </Col>
           </Row>
           <Row>
@@ -45,13 +67,14 @@ export const Home = () => {
           <Row>
             <Col md={{span: 7, offset: 5}} sm={4}>
               <Link to="/foodWine">
-              <Button variant="outline-transparent text-cover">What are some traditional food and drink in
+              <Button variant="outline-transparent text-cover">What are some traditional food in
                 Moldova?</Button>
               </Link>
             </Col>
           </Row>
-        </Container>
+          </Container>
       </header>
+
       <section  id="idMoldova" className="main-map">
         <Container>
           <Row>
