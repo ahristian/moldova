@@ -31,14 +31,13 @@ setInterval(function () {
   document.getElementsByClassName('bg-img')[0].setAttribute('style', 'background-image: url("' + images[0] + '")');
   images.splice(images.length, 0, images[0]);
   images.splice(0, 1);
-}, 8000)
+}, 7000)
   }
 
 export const Home = () => {
   return (
     <>
         <header onLoad={randomScreen()} >
-
           <Container fluid className="bg-img" style={{backgroundImage: "url(" + background + ")"}}>
           <Row className="py-2">
             <Col md={{span: 8, offset: 4}} sm={4}>
@@ -112,8 +111,8 @@ export const Home = () => {
           <Container >
             <p>
               Moldova has plenty beautiful nature and architecture. Being the poorest country in Europe, it has many
-              social problems. But the hospitality tradition stays hard in Moldovan peoples heart and they are happy to
-              assist you to have a pleasant visit.
+              social problems. However, the hospitality tradition stays hard in Moldovan`s peoples heart and they are
+              happy to assist you.
             </p>
           </Container>
         </Jumbotron>

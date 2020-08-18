@@ -51,6 +51,8 @@
     ]
   },
   "devDependencies": {
-    "pages": "0.0.16"
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "pages": "0.0.16",
+    "semantic-ui-react": "^1.1.1"
   }
 }
