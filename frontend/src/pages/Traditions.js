@@ -25,7 +25,7 @@ export const Traditions = () => {
         <Container>
           <Row>
             <Col>
-              <Card style={{width: '16rem'}}>
+              <Card style={{ width:'16rem' }}>
                 <Card.Img variant="top" src={martisor}/>
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>

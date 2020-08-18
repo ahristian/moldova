@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import "./pages/style.css"
 import { BrowserRouter } from "react-router-dom";
 import { Route, Switch } from "react-router";
-import { FourOhFour } from "./pages/FourOhFour";
 import { Traditions } from "./pages/Traditions";
 import { FoodWine } from "./pages/FoodWine";
 import { Destinations } from "./pages/Destinations";
@@ -25,8 +24,7 @@ const Routing = () => (
         <Route exact path="/traditions" component={Traditions}/>
         <Route exact path="/foodWine" component={FoodWine}/>
         <Route exact path="/destinations" component={Destinations}/>
-        <Route exact path="/home" component={Home}/>
-        <Route component={FourOhFour}/>
+        <Route component={Home}/>
       </Switch>
     </BrowserRouter>
     <FooterElement/>

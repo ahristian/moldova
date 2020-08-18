@@ -18,10 +18,10 @@ export const FooterElement = () => {
               <Col sm={6}>
 
                   <p className="name"> Andrei Hristian
-                    <a href="https://www.linkedin.com/in/andrei-hristian-a673551b3/" target="_blank">
+                    <a href="https://www.linkedin.com/in/andrei-hristian-a673551b3/" target="_blank" rel="noopener noreferrer" >
                     <FontAwesomeIcon className="fa-2x" id="linkedInIcon" icon={["fab", "linkedin"]}/>
                     </a>
-                    <a href="https://github.com/ahristian?tab=repositories" target="_blank">
+                    <a href="https://github.com/ahristian?tab=repositories" target="_blank" rel="noopener noreferrer" >
                       <FontAwesomeIcon className="fa-2x" id="faGithub" icon={faGithub}/>
                     </a>
                   </p>
