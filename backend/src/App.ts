@@ -3,6 +3,7 @@ import morgan from 'morgan'
 // Routes
 import { indexRoutes } from './routes/index.routes'
 
+
 // The following class creates the app and instantiates the server
 export class App {
     app: Application;
@@ -10,6 +11,7 @@ export class App {
     constructor (
         private port?: number | string
     ) {
+
         this.app = express()
         this.settings()
         this.middlewares()
