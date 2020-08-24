@@ -23,7 +23,7 @@ services:
     volumes:
       - compose-lesson:/var/lib/mysql
     ports:
-      - 33006:3306
+      - 3306:3306
 volumes:
   compose-lesson:
 

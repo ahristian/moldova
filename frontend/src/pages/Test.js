@@ -33,8 +33,7 @@ export const Test = () => {
                 <Popup
                   trigger={<Card.Img variant="top" src={Dedrarium} />}
                   modal
-                  closeOnDocumentClick
-                >
+                  closeOnDocumentClick>
                   <Card.Img src={Dedrarium} />
                 </Popup>
 

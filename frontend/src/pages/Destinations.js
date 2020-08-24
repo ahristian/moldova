@@ -5,7 +5,6 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Dedrarium from '../shared/images/dendrarium.jpg'
-import mamaliga from '../shared/images/mamaliga.jpg'
 
 
 export const Destinations = () => {
@@ -34,8 +33,7 @@ export const Destinations = () => {
                 <Popup
                   trigger={<a href="#"><Card.Img variant="top" src={Dedrarium} /></a> }
                   modal
-                  closeOnDocumentClick
-                >
+                  closeOnDocumentClick>
                   <Card.Img src={Dedrarium} />
                 </Popup>
                 <Card.Body>
