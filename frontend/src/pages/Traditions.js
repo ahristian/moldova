@@ -1,9 +1,11 @@
 import React from "react"
+import Popup from 'reactjs-popup'
 import { Container } from 'react-bootstrap'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import martisor from '../shared/images/martisor.jpg'
+import mamaliga from '../shared/images/mamaliga.jpg'
 
 export const Traditions = () => {
   return (
@@ -25,8 +27,13 @@ export const Traditions = () => {
         <Container>
           <Row>
             <Col>
-              <Card style={{ width:'16rem' }}>
-                <Card.Img variant="top" src={martisor}/>
+              <Card className="traditionCardElement" style={{ width:'16rem' }}>
+                <Popup
+                  trigger={<a href="#"><Card.Img variant="top" src={martisor} /></a> }
+                  modal
+                  closeOnDocumentClick>
+                  <Card.Img src={martisor} />
+                </Popup>
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   <Card.Text>

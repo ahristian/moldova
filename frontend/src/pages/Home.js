@@ -110,9 +110,9 @@ export const Home = () => {
         <Jumbotron className="imageBackgroundOrhei" fluid>
           <Container >
             <p>
-              Moldova has plenty beautiful nature and architecture. Being the poorest country in Europe, it has many
-              social problems. However, the hospitality tradition stays hard in Moldovan`s peoples heart and they are
-              happy to assist you.
+              Moldova has plenty beautiful nature and architecture. The hospitality tradition stays hard in Moldovan`s
+              peoples heart and they are happy to assist you during your visit.Travel to any corner of Moldova and you
+              will be welcomed by warm and friendly people with food and wine as welcome.
             </p>
           </Container>
         </Jumbotron>

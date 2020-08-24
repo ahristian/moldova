@@ -129,10 +129,16 @@
 .destinationCard {
     margin: 3rem 1rem 5rem;
 }
-.destinationCard img:hover {
-    width: 250%;
-    transition: 0.5s;
+.destinationCardElement {
+    border: 1px solid #4b4a49;
+    border-radius: 0.5rem;
 }
+.destinationCardElement:hover {
+    border: 1px solid #4b4a49;
+    box-shadow: 2px 2px 2rem #393939;
+    border-radius: 0.5rem;
+}
+
 
 /**********************  Food *****************************************************/
 .food h1 {
@@ -144,6 +150,10 @@
 }
 .foodCard {
     margin: 3rem 1rem 5rem;
+}
+.foodCardELement {
+    border: 1px solid #323232;
+    border-radius: 0.5rem;
 }
 
 /**********************  Tradition *****************************************************/
@@ -157,7 +167,10 @@
 .traditionCard {
     margin: 3rem 1rem 5rem;
 }
-
+.traditionCardElement {
+    border: 1px solid #4b4a49;
+    border-radius: 0.5rem;
+}
 
 /****************************************   END  ****************************************************/
 @media only screen and (max-width: 767px) {
@@ -198,7 +211,6 @@
         border: 1px solid black;
         width: 100%;
     }
-    .destinationCard img:hover {
-        width: 100%;
-    }
+
 }
+

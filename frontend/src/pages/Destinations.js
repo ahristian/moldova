@@ -1,9 +1,12 @@
 import React from "react"
+import Popup from 'reactjs-popup'
 import { Container } from 'react-bootstrap'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Dedrarium from '../shared/images/dendrarium.jpg'
+import mamaliga from '../shared/images/mamaliga.jpg'
+
 
 export const Destinations = () => {
   return (
@@ -22,12 +25,19 @@ export const Destinations = () => {
         </Row>
       </Container>
       </section>
+
         <section className="destinationCard mx-2">
         <Container>
           <Row>
             <Col>
-              <Card style={{ width: '16rem' }}>
-                <Card.Img variant="top" src={Dedrarium} />
+              <Card className="destinationCardElement" style={{ width: '16rem' }}>
+                <Popup
+                  trigger={<a href="#"><Card.Img variant="top" src={Dedrarium} /></a> }
+                  modal
+                  closeOnDocumentClick
+                >
+                  <Card.Img src={Dedrarium} />
+                </Popup>
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   <Card.Text>
@@ -40,6 +50,8 @@ export const Destinations = () => {
           </Row>
         </Container>
       </section>
+
+
     </>
   )
 };
