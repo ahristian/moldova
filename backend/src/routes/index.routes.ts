@@ -1,7 +1,7 @@
 import {Router} from "express"
 import {indexController} from '../controllers/index.controller'
 
-export const indexRoutes = Router()
+export const IndexRoutes = Router()
 
-indexRoutes.route("/")
+IndexRoutes.route("/")
     .get(indexController)
