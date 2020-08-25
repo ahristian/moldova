@@ -1,0 +1,15 @@
+
+import {Destination} from "../interfaces/Destination";
+import {connect} from "../../src/database";
+
+export async function insertTweet(destination: Destination) {
+    try {
+        const mySqlConnection = await connect()
+        const mySqlQuery = "INSERT INTO destination(destinationId, destinationContact, destinationDescription, destinationLocation, destinationTitle, destinationImageUrl) VALUES(UUID_TO_BIN(UUID()), :destinationContact, :destinationDescription, :destinationLocation, :destinationTitle, :destinationImageUrl)";
+
+        const [rows] = await mySqlConnection.execute(mySqlQuery, destination)
+        return "Destination created successfully"
+    } catch (error) {
+        console.log(error)
+    }
+}
