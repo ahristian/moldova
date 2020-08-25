@@ -1,13 +1,13 @@
 
-import {Destination} from "../interfaces/Destination";
+import {Food} from "../interfaces/Food";
 import {connect} from "../../src/database";
 
-export async function insertTweet(destination: Destination) {
+export async function insertFood(food: Food) {
     try {
         const mySqlConnection = await connect()
-        const mySqlQuery = "INSERT INTO destination(destinationId, destinationContact, destinationDescription, destinationLocation, destinationTitle, destinationImageUrl) VALUES(UUID_TO_BIN(UUID()), :destinationContact, :destinationDescription, :destinationLocation, :destinationTitle, :destinationImageUrl)";
+        const mySqlQuery = "INSERT INTO food(foodId, foodTitle, foodContent, foodImageUrl) VALUES(UUID_TO_BIN(UUID()), :foodTitle, :foodContent, :foodImageUrl)";
 
-        const [rows] = await mySqlConnection.execute(mySqlQuery, destination)
+        const [rows] = await mySqlConnection.execute(mySqlQuery, food)
         return "Destination created successfully"
     } catch (error) {
         console.log(error)

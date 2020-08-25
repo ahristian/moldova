@@ -1,12 +1,11 @@
-import {Destination} from "../interfaces/Destination";
+import {Tradition} from "../interfaces/Tradition";
 import {connect} from "../../src/database";
 import {Profile} from "../interfaces/Profile";
-import {Status} from "../interfaces/Status";
 
-export async function selectAllDestination() {
+export async function selectAllTraditions() {
     try {
         const mySqlConnection = await connect()
-        const mySqlQuery = "SELECT destinationContact, destinationDescription, destinationLocation, destinationTitle, destinationImageUrl FROM destination";
+        const mySqlQuery = "SELECT  traditionTitle, traditionContent, traditionImageUrl FROM tradition";
         const [rows] = await mySqlConnection.execute(mySqlQuery)
         return rows;
     } catch (error) {
