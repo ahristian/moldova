@@ -1,6 +1,8 @@
 import express, { Application } from 'express'
 import morgan from 'morgan'
 import DestinationRoutes from './routes/destination.routes';
+import TraditionRoutes from './routes/tradition.routes';
+import FoodRoutes from './routes/food.routes';
 import SignupRoute from './routes/signup.route';
 import LikeRoute from './routes/like.route';
 // Routes
@@ -56,10 +58,12 @@ export class App {
 
     // private method for setting up routes in their basic sense (ie. any route that performs an action on profiles starts with /profiles)
     private routes () {
-        // TODO add "/apis"
-        this.app.use('/apis',IndexRoutes);
-        /*  this.app.use('/apis/destination', DestinationRoutes);
-         this.app.use('/apis/sign-in', SignInRouter);
+
+        this.app.use('/apis/',IndexRoutes);
+        this.app.use('/apis/destination/', DestinationRoutes);
+        this.app.use('/apis/tradition/', TraditionRoutes);
+        this.app.use('/apis/food/', FoodRoutes);
+        /*this.app.use('/apis/sign-in', SignInRouter);
           this.app.use("/apis/sign-out", SignOutRoute);
           this.app.use('/apis/sign-up', SignupRoute);
           this.app.use('/apis/like', LikeRoute);*/
