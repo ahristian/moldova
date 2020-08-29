@@ -20,7 +20,7 @@ CREATE TABLE profile (
 CREATE TABLE destination (
                        destinationId BINARY(16) NOT NULL,
                        destinationContact VARCHAR(550) NOT NULL,
-                       destinationDescription BLOB NOT NULL,
+                       destinationDescription VARCHAR(2000) NOT NULL,
                        destinationLocation VARCHAR(250) NOT NULL,
                        destinationTitle VARCHAR(128) NOT NULL,
                        destinationImageUrl VARCHAR(128) NOT NULL,

@@ -3,15 +3,8 @@ import morgan from 'morgan'
 import DestinationRoutes from './routes/destination.routes';
 import TraditionRoutes from './routes/tradition.routes';
 import FoodRoutes from './routes/food.routes';
-import SignupRoute from './routes/signup.route';
-import LikeRoute from './routes/like.route';
-// Routes
 import {IndexRoutes} from './routes/index.routes';
-import { SignInRouter } from './routes/sign-in.route';
-import { passportMiddleware } from './lib/auth.controller';
 const session = require("express-session");
-import passport = require('passport');
-import {SignOutRoute} from "./routes/sign-out.route";
 const MemoryStore = require('memorystore')(session);
 
 
@@ -50,9 +43,6 @@ export class App {
 
         this.app.use(morgan('dev'));
         this.app.use(express.json());
-        this.app.use(session(sessionConfig));
-        this.app.use(passport.initialize());
-        this.app.use(passport.session());
 
     }
 
@@ -63,10 +53,7 @@ export class App {
         this.app.use('/apis/destination/', DestinationRoutes);
         this.app.use('/apis/tradition/', TraditionRoutes);
         this.app.use('/apis/food/', FoodRoutes);
-        /*this.app.use('/apis/sign-in', SignInRouter);
-          this.app.use("/apis/sign-out", SignOutRoute);
-          this.app.use('/apis/sign-up', SignupRoute);
-          this.app.use('/apis/like', LikeRoute);*/
+
     }
 
     // starts the server and tells the terminal to post a message that the server is running and on what port
