@@ -16,7 +16,6 @@ services:
       - ./backend/tsconfig.json:/home/node/app/tsconfig.json
   sql:
     build: ./sql
-    # Make sure to update this to match your project.
     env_file:
       - moldova.env
     command: --default-authentication-plugin=mysql_native_password
