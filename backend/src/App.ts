@@ -2,10 +2,15 @@ import express, { Application } from 'express'
 import morgan from 'morgan'
 import DestinationRoutes from './routes/destination.routes';
 import TraditionRoutes from './routes/tradition.routes';
+import SaveRoutes from './routes/save.routes';
 import FoodRoutes from './routes/food.routes';
 import {IndexRoutes} from './routes/index.routes';
 const session = require("express-session");
 const MemoryStore = require('memorystore')(session);
+import passport = require('passport');
+import {SignOutRoute} from './routes/sign-out.route';
+import {SignInRouter}  from './routes/sign-in.route';
+import SignupRoute from './routes/sign-up.route';
 
 
 // The following class creates the app and instantiates the server
@@ -27,8 +32,6 @@ export class App {
         this.app.set('port', this.port || process.env.PORT || 3000)
     }
 
-    // private method to setting up the middleware to handle json responses, one for dev and one for prod
-
     private middlewares () {
 
         const sessionConfig  =  {
@@ -43,8 +46,12 @@ export class App {
 
         this.app.use(morgan('dev'));
         this.app.use(express.json());
+        this.app.use(session(sessionConfig));
+        this.app.use(passport.initialize());
+        this.app.use(passport.session());
 
     }
+
 
     // private method for setting up routes in their basic sense (ie. any route that performs an action on profiles starts with /profiles)
     private routes () {
@@ -53,6 +60,10 @@ export class App {
         this.app.use('/apis/destination/', DestinationRoutes);
         this.app.use('/apis/tradition/', TraditionRoutes);
         this.app.use('/apis/food/', FoodRoutes);
+        this.app.use('/apis/sign-in', SignInRouter);
+        this.app.use("/apis/sign-out", SignOutRoute);
+        this.app.use('/apis/sign-up', SignupRoute);
+        this.app.use('/apis/save', SaveRoutes);
 
     }
 

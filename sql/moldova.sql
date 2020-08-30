@@ -43,19 +43,18 @@ CREATE TABLE tradition (
                         PRIMARY KEY(traditionId)
 );
 
-CREATE TABLE `like` (
-                        likeDestinationId BINARY(16) NOT NULL,
-                        likeFoodId BINARY(16) NOT NULL,
-                        likeTraditionId BINARY(16) NOT NULL,
-                        likeProfileId BINARY(16) NOT NULL,
-                        likeDate DATETIME(6) NOT NULL,
-                        INDEX(likeProfileId),
-                        INDEX(likeDestinationId),
-                        INDEX(likeFoodId),
-                        INDEX(likeTraditionId),
-                        FOREIGN KEY(likeDestinationId) REFERENCES destination(destinationId),
-                        FOREIGN KEY(likeFoodId) REFERENCES food(foodId),
-                        FOREIGN KEY(likeTraditionId) REFERENCES tradition(traditionId),
-                        FOREIGN KEY(likeProfileId) REFERENCES profile(profileId),
-                        PRIMARY KEY(likeProfileId, likeDestinationId, likeFoodId, likeTraditionId)
+CREATE TABLE `save` (
+                        saveDestinationId BINARY(16) NOT NULL,
+                        saveFoodId BINARY(16) NOT NULL,
+                        saveProfileId BINARY(16) NOT NULL,
+                        saveTraditionId BINARY(16) NOT NULL,
+                        INDEX(saveDestinationId),
+                        INDEX(saveFoodId),
+                        INDEX(saveProfileId),
+                        INDEX(saveTraditionId),
+                        FOREIGN KEY(saveDestinationId) REFERENCES destination(destinationId),
+                        FOREIGN KEY(saveFoodId) REFERENCES food(foodId),
+                        FOREIGN KEY(saveProfileId) REFERENCES tradition(traditionId),
+                        FOREIGN KEY(saveTraditionId) REFERENCES profile(profileId),
+                        PRIMARY KEY(saveDestinationId, saveFoodId, saveProfileId, saveTraditionId)
 );

@@ -1,14 +1,14 @@
 import passport from 'passport';
 import passportLocal, { Strategy } from 'passport-local';
 import { getProfileByProfileEmail } from './getProfileByProfileEmail';
-import {Profile} from "../../utils/interfaces/Profile";
+import {Profile} from '../../utils/interfaces/Profile';
 
 const LocalStrategy = passportLocal.Strategy;
 
 const passportStrategy : Strategy = new LocalStrategy(
     {
         usernameField: 'profileEmail',
-        passwordField: "profilePassword"
+        passwordField: 'profilePassword'
     },
     async (email, password, done) => {
         try {
