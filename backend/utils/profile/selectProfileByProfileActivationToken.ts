@@ -3,11 +3,13 @@ import {connect} from "../../src/database";
 export async function selectProfileByProfileActivationToken(profileActivationToken: string) {
     try {
         const mysqlConnection = await connect();
-        const mySqlSelectQuery = 'SELECT BIN_TO_UUID(profileId) as profileId, profileActivationToken, profileAtHandle, profileEmail, profileHash, profileName FROM profile WHERE profileActivationToken = :profileActivationToken';
-        const [rows] = await mysqlConnection.execute(mySqlSelectQuery, {profileActivationToken} )
-        return rows;
 
-    } catch(error) {
-        console.log(error)
+        const [rows] = await mysqlConnection.execute('SELECT BIN_TO_UUID(profileId) as profileId, profileActivationToken, profileEmail, profileHash, profileUserName FROM profile WHERE profileActivationToken = :profileActivationToken', {profileActivationToken});
+
+        // @ts-ignore is required so that rows can be interacted with save the array it is
+        return rows.length !== 0 ? {...rows[0]} : undefined;
+    } catch (e) {
+        console.error(e)
+        return undefined
     }
 }

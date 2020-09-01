@@ -6,7 +6,7 @@ export async function updateProfile(profile: Profile) {
     try {
 
         const mysqlConnection = await connect();
-        const query : string = 'UPDATE profile SET profileActivationToken = :profileActivationToken, profileAtHandle = :profileAtHandle, profileEmail = :profileEmail, profileHash = :profileHash, profileName = :profileName WHERE profileId = UUID_TO_BIN(:profileId)';
+        const query : string = 'UPDATE profile SET profileActivationToken = :profileActivationToken, profileEmail = :profileEmail, profileHash = :profileHash, profileUserName = :profileUserName WHERE profileId = UUID_TO_BIN(:profileId)';
 
         const [rows] = await mysqlConnection.execute(query, profile);
         return 'Profile successfully updated'
