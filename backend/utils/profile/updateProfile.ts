@@ -1,4 +1,3 @@
-
 import {Profile} from "../interfaces/Profile";
 import {connect} from "../../src/database";
 
