@@ -7,9 +7,9 @@ import { Route, Switch } from "react-router";
 import { Traditions } from "./pages/Traditions";
 import { FoodWine } from "./pages/FoodWine";
 import { Destinations } from "./pages/Destinations";
-import { Home } from "./pages/Home";
 import { FooterElement } from './shared/components/FooterElement'
 import { NavigationBar } from './shared/components/NavigationBar'
+import { Home } from "./pages/Home";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import {Test} from './pages/Test'
 

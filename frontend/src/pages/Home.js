@@ -9,7 +9,6 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import mapMoldova from '../shared/images/europeMoldova.png'
 import chisinau from '../shared/images/chisinau.jpg'
 import Card from 'react-bootstrap/Card'
-import { Link } from 'react-router-dom'
 
 import soroca from '../shared/images/soroca.jpg'
 import grapes from '../shared/images/grapes.jpg'
@@ -18,63 +17,59 @@ import moldovaSkies from '../shared/images/moldova-de-la-inaltimea.jpg'
 import tighina from '../shared/images/tighina.jpg'
 import orheiVechi from '../shared/images/orheiVechi.png'
 import someWhereMoldova from '../shared/images/somewhereMoldova.jpg'
+import Nav from 'react-bootstrap/Nav'
 
-function randomScreen () {
-let images = [soroca,
-  grapes,
-  moldovaSkies,
-  background,
-  tighina,
-  orheiVechi,
-  someWhereMoldova];
-setInterval(function () {
-  document.getElementsByClassName('bg-img')[0].setAttribute('style', 'background-image: url("' + images[0] + '")');
-  images.splice(images.length, 0, images[0]);
-  images.splice(0, 1);
-}, 7000)
-  }
+function randomBackground () {
+  let images = [soroca, moldovaSkies, tighina, orheiVechi, someWhereMoldova, grapes, background];
+  setInterval(function () {
+    document.getElementsByClassName('bg-img')[0].setAttribute('style', 'background-image: url("' + images[0] + '")');
+    images.splice(images.length, 0, images[0]);
+    images.splice(0, 1);
+  }, 7000)
+}
 
 export const Home = () => {
   return (
     <>
-        <header onLoad={randomScreen()} >
-          <Container fluid className="bg-img" style={{backgroundImage: "url(" + background + ")"}}>
-          <Row className="py-2">
+      <header onLoad={randomBackground()}>
+        <Container fluid className="bg-img" style={{backgroundImage: "url(" + background + ")"}}>
+          <Row className="py-1">
             <Col md={{span: 8, offset: 4}} sm={4}>
               <Button href="#idMoldova" variant="outline-transparent text-cover text-center">Where is Moldova?</Button>
             </Col>
           </Row>
           <Row>
             <Col md={{span: 6, offset: 6}} sm={4}>
-              <Button href="#thingsToKnow" id="btn-travel" variant="outline-transparent text-cover text-right">Things to know before to travel</Button>
-              </Col>
+              <Button href="#thingsToKnow" id="btn-travel" variant="outline-transparent text-cover text-right">Things to
+                know before to travel</Button>
+            </Col>
           </Row>
           <Row>
             <Col md={{span: 6, offset: 3}} sm={4}>
-              <Link to="/destinations">
-              <Button variant="outline-transparent text-cover">What can I visit in Moldova?</Button>
-              </Link>
+              <Nav.Link href="/destinations">
+                <Button variant="outline-transparent text-cover">What can I visit in Moldova?</Button>
+              </Nav.Link>
             </Col>
           </Row>
           <Row>
             <Col md={{span: 7, offset: 1}} sm={4}>
-              <Link to="/traditions">
-              <Button variant="outline-transparent text-cover">What traditions are in Moldova?</Button>
-              </Link>
+              <Nav.Link href="/traditions">
+                <Button variant="outline-transparent text-cover">What traditions are in Moldova?</Button>
+              </Nav.Link>
             </Col>
           </Row>
           <Row>
-            <Col md={{span: 7, offset: 5}} sm={4}>
-              <Link to="/foodWine">
-              <Button variant="outline-transparent text-cover">What are some traditional food in
-                Moldova?</Button>
-              </Link>
+            <Col md={{span: 8, offset: 4}} sm={4}>
+              <Nav.Link href="/foodWine">
+                <Button variant="outline-transparent text-cover">What are some traditional food in
+                  Moldova?</Button>
+              </Nav.Link>
             </Col>
           </Row>
-          </Container>
+        </Container>
       </header>
 
-      <section  id="idMoldova" className="main-map">
+      <section id="idMoldova" className="main-map">
         <Container>
           <Row>
             <Col>
@@ -108,7 +103,7 @@ export const Home = () => {
       </section>
       <section className="section-mainPicture">
         <Jumbotron className="imageBackgroundOrhei" fluid>
-          <Container >
+          <Container>
             <p>
               Moldova has plenty beautiful nature and architecture. The hospitality tradition stays hard in Moldovan`s
               peoples heart and they are happy to assist you during your visit.Travel to any corner of Moldova and you
@@ -120,21 +115,21 @@ export const Home = () => {
       <section className="section-mainWhen">
         <Container>
           <Row>
-            <Card style={{ width: '50rem' }}>
+            <Card style={{width: '50rem'}}>
               <Card.Title id="thingsToKnow"><h2>Things to know before visiting Moldova</h2></Card.Title>
               <Card.Body>
-                <Card.Text >
+                <Card.Text>
                   As other post-Soviet country it is recommended as tourist to be aware and to avoid them. The
-                    biggest risk to travelers remains petty theft, such as pick pocketing. This generally occurs in the
-                    usual high-risk areas like crowded city streets in Chisinau and on buses and trains, especially
-                    international ones. Travelers should only use official taxis "yellow ones" so you don't get ripped
-                    off.
-                    Be on the lookout for overcharging by taxi drivers and restaurant or bar staff. To avoid this issue,
-                    agree on taxi fare before getting in the car and ask to see menu prices in writing before ordering.
+                  biggest risk to travelers remains petty theft, such as pick pocketing. This generally occurs in the
+                  usual high-risk areas like crowded city streets in Chisinau and on buses and trains, especially
+                  international ones. Travelers should only use official taxis "yellow ones" so you don't get ripped
+                  off.
+                  Be on the lookout for overcharging by taxi drivers and restaurant or bar staff. To avoid this issue,
+                  agree on taxi fare before getting in the car and ask to see menu prices in writing before ordering.
 
                 </Card.Text>
               </Card.Body>
-              <Image variant="bottom" src={chisinau} rounded  />
+              <Image variant="bottom" src={chisinau} rounded/>
             </Card>
           </Row>
         </Container>

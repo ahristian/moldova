@@ -4,7 +4,7 @@
 }
 /* Navigation */
 .navbar {
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 1rem;
 }
 .navbar-dark .navbar-nav .nav-link {
     font-size: 22px;
@@ -23,15 +23,15 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: 0.6s;
+    transition: 0.8s;
     height: 100vh;
 }
 
 .text-cover {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 300;
     color: white;
-    margin: 2rem 2rem 0;
+    margin: 1.5rem 1rem 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
     border: none;
 }
@@ -56,12 +56,12 @@
 
 /* section-mainPicture */
 .section-mainPicture {
-    margin: 5rem 0 3rem;
+    margin: 5rem 0 0;
 
 }
 .section-mainPicture p {
     color: white;
-    font-size: 140%;
+    font-size: 120%;
     width: 50%;
 }
 .imageBackgroundOrhei {
@@ -69,7 +69,7 @@
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
-    height: 50vh;
+    height: 60vh;
 }
 /* section-mainWhen */
 .section-mainWhen .card h2 {
@@ -90,11 +90,11 @@
 /*****Footer ******/
 .footer-fluid {
     background-color: #535c68;
-    padding: 2rem 1rem ;
+    padding: 1rem 1rem ;
 }
 .footer-p1 {
  text-align: right;
-    padding-top: 5px;
+    padding-top: 3px;
 }
 .footer-fluid p {
     color: white;
@@ -121,7 +121,7 @@
 /**********************  Destinations *****************************************************/
 .destination h1 {
     text-align: center;
-    margin: 5rem 0 3rem;
+    margin: 3rem 0 3rem;
 }
 .destination p {
     text-align: justify;
@@ -129,10 +129,20 @@
 .destinationCard {
     margin: 3rem 1rem 5rem;
 }
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
 .destinationCardElement {
     border: 1px solid #4b4a49;
     border-radius: 0.5rem;
 }
+/*.destinationCard img {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}*/
 .destinationCardElement:hover {
     border: 1px solid #4b4a49;
     box-shadow: 2px 2px 2rem #393939;
@@ -143,7 +153,7 @@
 /**********************  Food *****************************************************/
 .food h1 {
     text-align: center;
-    margin: 5rem 0 3rem;
+    margin: 3rem 0 3rem;
 }
 .food p {
     text-align: justify;
@@ -159,7 +169,7 @@
 /**********************  Tradition *****************************************************/
 .tradition h1 {
     text-align: center;
-    margin: 5rem 0 3rem;
+    margin: 3rem 0 3rem;
 }
 .tradition p {
     text-align: justify;
@@ -184,11 +194,21 @@
         padding-left: 0;
         letter-spacing: 2px;
     }
-
+    .bg-img {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: 0.8s;
+        height: 100vh;
+    }
+    .main-map img{
+        padding-left: 1rem;
+        margin-bottom: 2rem;
+    }
     .text-cover {
         font-size: 25px;
-        text-align: left;
-        margin: 1.6rem 0.2rem;
+        text-align: center;
+        margin: 1rem 0;
         padding: 0;
     }
 
@@ -196,7 +216,7 @@
         padding: 2rem 1rem;
         color: white;
         font-size: 100%;
-        width: 80%;
+        width: 98%;
         height:90%;
     }
     .imageBackgroundOrhei {
