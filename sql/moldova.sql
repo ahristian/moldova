@@ -7,10 +7,9 @@ DROP TABLE IF EXISTS profile;
 CREATE TABLE profile (
                              profileId BINARY(16) NOT NULL,
                              profileActivationToken VARCHAR(250) NOT NULL,
-                             profileAtHandle VARCHAR(250) NOT NULL,
                              profileEmail VARCHAR(250) NOT NULL,
                              profileHash VARCHAR(250) NOT NULL,
-                             profileName VARCHAR(250) NOT NULL,
+                             profileUserName VARCHAR(250) NOT NULL,
                              UNIQUE KEY (profileId),
                              UNIQUE KEY  (profileEmail),
                              PRIMARY KEY(profileId)
