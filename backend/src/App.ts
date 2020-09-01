@@ -4,7 +4,7 @@ import DestinationRoutes from './routes/destination.routes';
 import TraditionRoutes from './routes/tradition.routes';
 import SaveRoutes from './routes/save.routes';
 import FoodRoutes from './routes/food.routes';
-import {IndexRoutes} from './routes/index.routes';
+import IndexRoutes from './routes/index.routes';
 const session = require("express-session");
 const MemoryStore = require('memorystore')(session);
 import passport = require('passport');

@@ -1,19 +1,5 @@
-export const signupValidator = {
-    profileAtHandle: {
-        escape: true,
-        trim: true,
-        isLength: {
-            errorMessage: 'profileAtHandle must be between seven and thirty two characters',
-            options: { min: 7, max: 32 }
-        }
-    },
-    profileAvatarUrl: {
-        optional: {
-            nullable: true
-        },
-        trim: true,
-        escape: true
-    },
+export const signUpValidator = {
+
     profileEmail: {
         isEmail: {
             errorMessage: 'Please provide a valid email'
@@ -36,13 +22,12 @@ export const signupValidator = {
         trim: true,
         escape: true
     },
-    profilePhone: {
-        escape: true,
-        trim: true,
-        optional: {
-            options: {
-                nullable: true
+    profileUserName: {
+            escape: true,
+            trim: true,
+            isLength: {
+                errorMessage: 'UserName must be between 3 and thirty two characters',
+                options: { min: 3, max: 32 }
             }
-        }
-    }
+        },
 };
