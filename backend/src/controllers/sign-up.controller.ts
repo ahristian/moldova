@@ -7,18 +7,18 @@ import {insertProfile} from "../../utils/profile/insertProfile";
 
 const mailgun = require("mailgun-js")
 
-export async function signupProfileController(request: Request, response: Response) {
+export async function signUpProfileController(request: Request, response: Response) {
     try {
 
 
-        const {profileAtHandle, profileEmail, profileName, profilePassword} = request.body;
+        const {profileEmail, profileUserName, profilePassword} = request.body;
         const profileHash = await setHash(profilePassword);
         const profileActivationToken = setActivationToken();
-        const basePath = `${request.protocol}://${request.get('host')}${request.originalUrl}activation/${profileActivationToken}`
+        const basePath = `${request.protocol}://${request.get('host')}${request.originalUrl}/activation/${profileActivationToken}`
         console.log(profileActivationToken)
 
-        const message = `<h2>Welcome to DDCTwitter.</h2>
-<p>In order to start posting tweets of cats you must confirm your account </p>
+        const message = `<h2>Welcome to Moldova Travel Guide.</h2>
+<p>In order to start save destinations, you must confirm your account </p>
 <p><a href="${basePath}">${basePath}</a></p>
 `
 
@@ -33,10 +33,9 @@ export async function signupProfileController(request: Request, response: Respon
         const profile: Profile = {
             profileId: null,
             profileActivationToken,
-            profileAtHandle,
             profileEmail,
             profileHash,
-            profileName
+            profileUserName
         };
 
      await insertProfile(profile)

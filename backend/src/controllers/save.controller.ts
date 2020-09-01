@@ -24,10 +24,11 @@ export async function toggleSaveController(request: Request, response: Response)
 
         }
         const select = await selectSave (save)
-              if (select[0]){
-            await deleteSave(save)
+        // @ts-ignore
+        if (select[0]){
+            const result = await deleteSave(save)
         }else{
-            await insertSave(save)
+            const result = await insertSave(save)
         }
 
         const status: Status = {
