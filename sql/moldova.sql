@@ -43,12 +43,11 @@ CREATE TABLE tradition (
                         PRIMARY KEY(traditionId)
 );
 
-CREATE TABLE `like` (
+CREATE TABLE `save` (
                         likeDestinationId BINARY(16) NOT NULL,
                         likeFoodId BINARY(16) NOT NULL,
                         likeTraditionId BINARY(16) NOT NULL,
                         likeProfileId BINARY(16) NOT NULL,
-                        likeDate DATETIME(6) NOT NULL,
                         INDEX(likeProfileId),
                         INDEX(likeDestinationId),
                         INDEX(likeFoodId),
