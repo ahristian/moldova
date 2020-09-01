@@ -23,7 +23,7 @@ export class App {
 
         this.app = express()
         this.settings()
-        this.middlewares()
+        this.middleware()
         this.routes()
     }
 
@@ -32,7 +32,7 @@ export class App {
         this.app.set('port', this.port || process.env.PORT || 3000)
     }
 
-    private middlewares () {
+    private middleware () {
 
         const sessionConfig  =  {
             store: new MemoryStore({
@@ -61,7 +61,7 @@ export class App {
         this.app.use('/apis/tradition/', TraditionRoutes);
         this.app.use('/apis/food/', FoodRoutes);
         this.app.use('/apis/sign-in', SignInRouter);
-        this.app.use("/apis/sign-out", SignOutRoute);
+        this.app.use('/apis/sign-out', SignOutRoute);
         this.app.use('/apis/sign-up', SignupRoute);
         this.app.use('/apis/save', SaveRoutes);
 
