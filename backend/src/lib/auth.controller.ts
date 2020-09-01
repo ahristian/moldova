@@ -1,19 +1,19 @@
 import passport from 'passport';
 import passportLocal, { Strategy } from 'passport-local';
-import { getProfileByProfileEmail } from './getProfileByProfileEmail';
-import {Profile} from '../../utils/interfaces/Profile';
+import { selectProfileByProfileEmail } from './getProfileByProfileEmail';
+import {Profile} from "../../utils/interfaces/Profile";
 
 const LocalStrategy = passportLocal.Strategy;
 
 const passportStrategy : Strategy = new LocalStrategy(
     {
         usernameField: 'profileEmail',
-        passwordField: 'profilePassword'
+        passwordField: "profilePassword"
     },
     async (email, password, done) => {
         try {
 
-            const profile : Profile | undefined = await getProfileByProfileEmail(email);
+            const profile : Profile | undefined = await selectProfileByProfileEmail(email);
 
             return profile ? done(null, profile) : done(undefined, undefined, { message: 'Incorrect username or password'});
         }

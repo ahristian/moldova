@@ -1,14 +1,16 @@
-import {connect} from '../database';
 
-export async function getProfileByProfileEmail(profileEmail: string) {
+import {connect} from "../../src/database";
+
+export async function selectProfileByProfileEmail(profileEmail: string) {
     try {
         const mysqlConnection = await connect();
-        const mySqlSelectQuery = 'SELECT BIN_TO_UUID(profileId) as profileId, profileActivationToken, profileAtHandle, profileEmail,profileHash,profileName FROM profile WHERE profileEmail = :profileEmail';
 
-const [rows] = await mysqlConnection.execute(mySqlSelectQuery, {profileEmail} )
-return rows;
+        const [rows] = await mysqlConnection.execute('SELECT BIN_TO_UUID(profileId) as profileId, profileActivationToken, profileEmail, profileHash, profileUserName FROM profile WHERE profileEmail = :profileEmail', {profileEmail});
 
-} catch(error) {
-    console.log(error)
-}
+        // @ts-ignore is required so that rows can be interacted with save the array it is
+        return rows.length !== 0 ? {...rows[0]} : undefined;
+    } catch (e) {
+        console.error(e)
+        return undefined
+    }
 }
