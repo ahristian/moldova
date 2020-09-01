@@ -1,7 +1,9 @@
-import {Router} from "express"
-import {indexController} from '../controllers/index.controller'
+import { Router } from 'express';
+import { indexWelcome } from '../controllers/index.controller';
 
-export const IndexRoutes = Router()
+const router = Router();
 
-IndexRoutes.route("/")
-    .get(indexController)
+router.route('/')
+    .get(indexWelcome);
+
+export default router;
