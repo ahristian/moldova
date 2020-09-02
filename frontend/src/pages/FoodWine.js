@@ -5,9 +5,20 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import mamaliga from '../shared/images/mamaliga.jpg'
-
+import {useDispatch, useSelector} from 'react-redux'
+import { fetchAllDestinations } from '../store/destination'
 
 export const FoodWine = () => {
+  /*const dispatch = useDispatch()
+  const sideEffects = () =>  {
+    dispatch(fetchAllDestinations())
+  }
+  React.useEffect(sideEffects, [])
+  const destinations = useSelector(state => state.destinations ? state.destinations : []);
+  console.table(destinations)*/
+
+
+
   return (
     <>
       <section className="food">
