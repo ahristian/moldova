@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col'
 import { fetchAllDestinations } from '../store/destination'
 import { DestinationCard } from '../ui/DestinationCard'
 
+
 export const DestinationsPage = () => {
   const dispatch = useDispatch()
   const sideEffects = () =>  {

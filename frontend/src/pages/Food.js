@@ -6,18 +6,18 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import mamaliga from '../shared/images/mamaliga.jpg'
 import {useDispatch, useSelector} from 'react-redux'
-import { fetchAllDestinations } from '../store/destination'
+import { fetchAllFoods } from '../store/food'
+import { FoodCard } from '../ui/FoodCard'
 
-export const FoodWine = () => {
-  /*const dispatch = useDispatch()
+export const Food = () => {
+  const dispatch = useDispatch()
   const sideEffects = () =>  {
-    dispatch(fetchAllDestinations())
+    dispatch(fetchAllFoods())
+
   }
   React.useEffect(sideEffects, [])
-  const destinations = useSelector(state => state.destinations ? state.destinations : []);
-  console.table(destinations)*/
-
-
+  const foods = useSelector(state => state.foods ? state.foods : []);
+  console.table(foods)
 
   return (
     <>
@@ -35,28 +35,10 @@ export const FoodWine = () => {
         </Container>
       </section>
 
-
-
       <section className="foodCard">
         <Container>
-          <Row>
-            <Col>
-              <Card className="foodCardELement" style={{width: '16rem'}}>
-
-                <Popup
-                  trigger={<a href="#"><Card.Img variant="top" src={mamaliga} /></a> }
-                  modal
-                  closeOnDocumentClick>
-                  <Card.Img src={mamaliga} />
-                </Popup>
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Food name mamaliga.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
+          <Row md={8} className="justify-content-md-center">
+            {foods.map(food => <FoodCard food={food}/>)}
           </Row>
         </Container>
       </section>

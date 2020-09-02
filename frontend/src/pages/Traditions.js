@@ -5,10 +5,24 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import martisor from '../shared/images/martisor.jpg'
-import mamaliga from '../shared/images/mamaliga.jpg'
+
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchAllTraditions } from '../store/tradition'
+import { TraditionCard } from '../ui/TraditionCard'
 
 export const Traditions = () => {
-  return (
+
+    const dispatch = useDispatch()
+    const sideEffects = () =>  {
+      dispatch(fetchAllTraditions())
+
+    }
+    React.useEffect(sideEffects, [])
+    const traditions = useSelector(state => state.traditions ? state.traditions : []);
+    console.table(traditions)
+
+
+    return (
     <>
       <section className="tradition">
         <Container>
@@ -25,23 +39,8 @@ export const Traditions = () => {
       </section>
       <section className="traditionCard">
         <Container>
-          <Row>
-            <Col>
-              <Card className="traditionCardElement" style={{ width:'16rem' }}>
-                <Popup
-                  trigger={<a href="#"><Card.Img variant="top" src={martisor} /></a> }
-                  modal
-                  closeOnDocumentClick>
-                  <Card.Img src={martisor} />
-                </Popup>
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Martisor
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
+          <Row md={8} className="justify-content-md-center">
+            {traditions.map(tradition => <TraditionCard tradition={tradition}/>)}
           </Row>
         </Container>
       </section>

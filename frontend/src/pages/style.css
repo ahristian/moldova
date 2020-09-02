@@ -1,6 +1,6 @@
 
 * {
-    font-size: 20px;
+    font-size: 18px;
 }
 /* Navigation */
 .navbar {
@@ -151,9 +151,22 @@
 .foodCard {
     margin: 3rem 1rem 5rem;
 }
-.foodCardELement {
+.foodCardElement {
     border: 1px solid #323232;
-    border-radius: 0.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+.foodCardElement:hover {
+    border: 1px solid #4b4a49;
+    box-shadow: 2px 2px 2rem #393939;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+.foodCardElement img {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
+.foodCardElement p {
+    font-size: 16px;
 }
 
 /**********************  Tradition *****************************************************/
@@ -168,8 +181,21 @@
     margin: 3rem 1rem 5rem;
 }
 .traditionCardElement {
+    border: 1px solid #323232;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+.traditionCardElement:hover {
     border: 1px solid #4b4a49;
-    border-radius: 0.5rem;
+    box-shadow: 2px 2px 2rem #393939;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+.traditionCardElement img {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
+.traditionCardElement p {
+    font-size: 16px;
 }
 
 /****************************************   END  ****************************************************/
