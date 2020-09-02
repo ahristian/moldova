@@ -57,7 +57,7 @@ export class App {
     private routes () {
 
         this.app.use('/apis/',IndexRoutes);
-        this.app.use('/apis/destination/', DestinationRoutes);
+        this.app.use('/apis/destinations/', DestinationRoutes);
         this.app.use('/apis/tradition/', TraditionRoutes);
         this.app.use('/apis/food/', FoodRoutes);
         this.app.use('/apis/sign-in', SignInRouter);
