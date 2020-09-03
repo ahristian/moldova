@@ -1,13 +1,12 @@
-
 import {connect} from "../../src/database";
 
 export async function selectAllDestinations() {
     try {
         const mySqlConnection = await connect()
-        const mySqlQuery = "SELECT  BIN_TO_UUID(destinationId) AS destinationId, destinationContact, destinationDescription, destinationLocation, destinationTitle, destinationImageUrl FROM destination";
+        const mySqlQuery = "SELECT  BIN_TO_UUID(destinationId) AS destinationId, destinationContact, destinationDescription, destinationLocation, destinationTitle FROM destination";
         const [rows] = await mySqlConnection.execute(mySqlQuery)
         return rows;
-} catch (error) {
-    console.log(error)
-}
+    } catch (error) {
+        console.log(error)
+    }
 }

@@ -58,8 +58,8 @@ export class App {
 
         this.app.use('/apis/',IndexRoutes);
         this.app.use('/apis/destinations/', DestinationRoutes);
-        this.app.use('/apis/tradition/', TraditionRoutes);
-        this.app.use('/apis/food/', FoodRoutes);
+        this.app.use('/apis/traditions/', TraditionRoutes);
+        this.app.use('/apis/foods/', FoodRoutes);
         this.app.use('/apis/sign-in', SignInRouter);
         this.app.use('/apis/sign-out', SignOutRoute);
         this.app.use('/apis/sign-up', SignupRoute);
