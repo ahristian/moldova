@@ -3,18 +3,19 @@ import {createSlice} from '@reduxjs/toolkit'
 import {httpConfig} from "../utils/httpConfig"
 
 const destinationsPhotoSlice = createSlice({
-  name: "destinationsPhoto",
+  name: "destinationsPhotos",
   initialState: [],
   reducers: {
-    getAllDestinationsByDestinationId: (destinationsPhoto, action) => {
+    getAllDestinationPhotos: (destinationsPhotos, action) => {
       const {payload} = action
       return payload
     }
   }
 })
-export const {getAllDestinationsByDestinationId} = destinationsPhotoSlice.actions
-export const fetchAllDestinationsByDestinationId = (destinationId) => async dispatch => {
+
+export const {getAllDestinationPhotos} = destinationsPhotoSlice.actions
+export const fetchDestinationPhotosByDestinationId = (destinationId) => async dispatch => {
   const {data} = await httpConfig(`/apis/destinations/${destinationId}/`);
-  dispatch(getAllDestinationsByDestinationId(data))
+  dispatch(getAllDestinationPhotos(data))
 }
 export default destinationsPhotoSlice.reducer
