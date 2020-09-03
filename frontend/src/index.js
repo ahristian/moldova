@@ -7,13 +7,13 @@ import { Route, Switch } from "react-router";
 import { Traditions } from "./pages/Traditions";
 import { Food } from "./pages/Food";
 import { DestinationsPage } from "./pages/Destinations";
+import { SinglePage } from './pages/singlePage'
 import { Home } from "./pages/Home";
 import { FooterElement } from './shared/components/FooterElement'
 import { NavigationBar } from './shared/components/NavigationBar'
+
+
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
-import {Test} from './pages/Test'
-
-
 import {configureStore} from '@reduxjs/toolkit'
 import reducer from './store'
 import {Provider} from 'react-redux'
@@ -29,7 +29,7 @@ const Routing = (store) => (
         <Route exact path="/traditions" component={Traditions}/>
         <Route exact path="/foods" component={Food}/>
         <Route exact path="/destinations" component={DestinationsPage}/>
-        <Route exact path="/test" component={Test}/>
+        <Route exact path="/destinations/:destinationId" component={SinglePage}/>
         <Route component={Home}/>
       </Switch>
     </BrowserRouter>
