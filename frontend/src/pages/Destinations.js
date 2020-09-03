@@ -7,19 +7,17 @@ import Col from 'react-bootstrap/Col'
 
 import { fetchAllDestinations } from '../store/destination'
 import { DestinationCard } from '../ui/DestinationCard'
-
+import { DestinationElement } from '../ui/DestinationElement'
+import { fetchAllDestinationsByDestinationId } from '../store/destinationPhoto'
 
 export const DestinationsPage = () => {
   const dispatch = useDispatch()
   const sideEffects = () =>  {
     dispatch(fetchAllDestinations())
-
   }
   React.useEffect(sideEffects, [])
   const destinations = useSelector(state => state.destinations ? state.destinations : []);
   console.table(destinations)
-
-
 
 
   return (
@@ -41,8 +39,8 @@ export const DestinationsPage = () => {
 
       <section className="destinationCard mx-2">
         <Container>
-          <Row>
-              {destinations.map(destination => <DestinationCard destination={destination}/>)}
+          <Row className="justify-content-md-center">
+            {destinations.map(destination => <DestinationCard destination={destination} key={destination.destinationId}/>)}
           </Row>
         </Container>
       </section>
