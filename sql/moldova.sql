@@ -22,7 +22,6 @@ CREATE TABLE destination (
                        destinationDescription VARCHAR(2000) NOT NULL,
                        destinationLocation VARCHAR(250) NOT NULL,
                        destinationTitle VARCHAR(128) NOT NULL,
-                       destinationImageUrl VARCHAR(128) NOT NULL,
                        PRIMARY KEY(destinationId)
 );
 
@@ -41,7 +40,13 @@ CREATE TABLE tradition (
                         traditionImageUrl VARCHAR(128) NOT NULL,
                         PRIMARY KEY(traditionId)
 );
-
+CREATE TABLE destinationPhoto (
+                            destinationPhotoId BINARY(16) NOT NULL,
+                            destinationPhotoDestinationId BINARY(16) NOT NULL,
+                            destinationPhotoUrl VARCHAR(128) NOT NULL,
+                            FOREIGN KEY (destinationPhotoDestinationId) REFERENCES destination(destinationId),
+                            PRIMARY KEY(destinationPhotoId)
+);
 CREATE TABLE `save` (
                         saveDestinationId BINARY(16) NOT NULL,
                         saveFoodId BINARY(16) NOT NULL,
