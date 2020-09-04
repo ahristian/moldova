@@ -22,6 +22,7 @@ CREATE TABLE destination (
                        destinationDescription VARCHAR(2000) NOT NULL,
                        destinationLocation VARCHAR(250) NOT NULL,
                        destinationTitle VARCHAR(128) NOT NULL,
+                       destinationImage VARCHAR(128) NOT NULL ,
                        PRIMARY KEY(destinationId)
 );
 
