@@ -18,6 +18,7 @@ import moldovaSkies from '../shared/images/moldova-de-la-inaltimea.jpg'
 import tighina from '../shared/images/tighina.jpg'
 import orheiVechi from '../shared/images/orheiVechi.png'
 import someWhereMoldova from '../shared/images/somewhereMoldova.jpg'
+import Nav from 'react-bootstrap/Nav'
 
 function randomScreen () {
 let images = [soroca,
@@ -51,24 +52,24 @@ export const Home = () => {
           </Row>
           <Row>
             <Col md={{span: 6, offset: 3}} sm={4}>
-              <Link to="/destinations">
+              <Nav.Link to="/destinations">
               <Button variant="outline-transparent text-cover">What can I visit in Moldova?</Button>
-              </Link>
+              </Nav.Link>
             </Col>
           </Row>
           <Row>
             <Col md={{span: 7, offset: 1}} sm={4}>
-              <Link to="/traditions">
+              <Nav.Link to="/traditions">
               <Button variant="outline-transparent text-cover">What traditions are in Moldova?</Button>
-              </Link>
+                </Nav.Link>
             </Col>
           </Row>
           <Row>
             <Col md={{span: 7, offset: 5}} sm={4}>
-              <Link to="/foodWine">
+              <Nav.Link to="/foodWine">
               <Button variant="outline-transparent text-cover">What are some traditional food in
                 Moldova?</Button>
-              </Link>
+              </Nav.Link>
             </Col>
           </Row>
           </Container>
@@ -118,12 +119,11 @@ export const Home = () => {
         </Jumbotron>
       </section>
       <section className="section-mainWhen">
-        <Container>
-          <Row>
-            <Card style={{ width: '50rem' }}>
-              <Card.Title id="thingsToKnow"><h2>Things to know before visiting Moldova</h2></Card.Title>
-              <Card.Body>
-                <Card.Text >
+        <Container id="thingsToKnow">
+          <Row >
+            <Col>
+              <h2>Things to know before visiting Moldova</h2>
+                <p>
                   As other post-Soviet country it is recommended as tourist to be aware and to avoid them. The
                     biggest risk to travelers remains petty theft, such as pick pocketing. This generally occurs in the
                     usual high-risk areas like crowded city streets in Chisinau and on buses and trains, especially
@@ -132,10 +132,12 @@ export const Home = () => {
                     Be on the lookout for overcharging by taxi drivers and restaurant or bar staff. To avoid this issue,
                     agree on taxi fare before getting in the car and ask to see menu prices in writing before ordering.
 
-                </Card.Text>
-              </Card.Body>
-              <Image variant="bottom" src={chisinau} rounded  />
-            </Card>
+                </p>
+          </Col>
+
+          <Col>
+              <Image className="imageHomeBottom" src={chisinau} rounded  />
+          </Col>
           </Row>
         </Container>
       </section>

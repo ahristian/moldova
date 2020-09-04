@@ -72,19 +72,19 @@
     height: 50vh;
 }
 /* section-mainWhen */
-.section-mainWhen .card h2 {
+.section-mainWhen h2 {
     text-align: center;
+    margin: 2rem 0 3rem;
 }
-.section-mainWhen .card img {
+.section-mainWhen img {
     border: 1px solid black;
-    width: 60%;
+    width: 110%;
     margin: 1rem auto;
 
 }
-.section-mainWhen .card {
+.section-mainWhen  {
    margin: 4rem  auto 8rem;
-    border: none;
-    text-align: justify;
+
 }
 
 /*****Footer ******/
@@ -111,8 +111,9 @@
 .footer-fluid a:hover {
     color: blue;
 }
-.name {
+.footer-p1 a {
     color: white;
+    font-size: 25px;
 }
 .name:hover {
     color: #c1a445;
@@ -123,22 +124,55 @@
     text-align: center;
     margin: 5rem 0 3rem;
 }
-.destination p {
-    text-align: justify;
-}
+
 .destinationCard {
     margin: 3rem 1rem 5rem;
+    padding-bottom: 1rem;
 }
 .destinationCardElement {
     border: 1px solid #4b4a49;
     border-radius: 0.5rem;
 }
-.destinationCardElement:hover {
+.destinationCardElement:hover{
     border: 1px solid #4b4a49;
     box-shadow: 2px 2px 2rem #393939;
     border-radius: 0.5rem;
+    color: #212121;
+    text-decoration: none;
+}
+.destinationCardElement img {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+    padding-bottom: 1rem;
+}
+.destinationCardElement {
+    width: 35rem;
 }
 
+/*****************************Destination Each Page *****************************/
+.destinationEach{
+    margin: 3rem 1rem 5rem;
+    border: none;
+
+}
+.destinationEachImage  {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+.destinationTitle {
+    text-align: center;
+}
+
+.singlePageLocation {
+    font-size: 120%;
+    font-weight: bold;
+}
+.singlePageText {
+    margin-top: 1rem;
+    text-align: justify;
+}
 
 /**********************  Food *****************************************************/
 .food h1 {
@@ -237,6 +271,14 @@
         border: 1px solid black;
         width: 100%;
     }
-
+    .destinationCardElement img {
+        width: 100%;
+        height: 40vw;
+        object-fit: cover;
+        padding-bottom: 1rem;
+    }
+    .destinationCardElement {
+    width: 18rem;
+    }
 }
 

@@ -1,24 +1,20 @@
 import React from "react"
-import {useDispatch, useSelector} from 'react-redux'
-import Popup from 'reactjs-popup'
+import { useDispatch, useSelector } from 'react-redux'
+
 import { CardColumns, Container } from 'react-bootstrap'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-
 import { fetchAllDestinations } from '../store/destination'
 import { DestinationCard } from '../ui/DestinationCard'
-import { DestinationElement } from '../ui/DestinationElement'
-import { fetchAllDestinationsByDestinationId } from '../store/destinationPhoto'
 
 export const DestinationsPage = () => {
   const dispatch = useDispatch()
-  const sideEffects = () =>  {
+  const sideEffects = () => {
     dispatch(fetchAllDestinations())
   }
   React.useEffect(sideEffects, [])
   const destinations = useSelector(state => state.destinations ? state.destinations : []);
   console.table(destinations)
-
 
   return (
     <>
@@ -27,25 +23,26 @@ export const DestinationsPage = () => {
           <Row>
             <Col>
               <h1>Things Not to Miss in Moldova</h1>
-              <p>The Republic of Moldova has a rich cultural heritage which may be of great interest to tourists. 140 cultural
-                heritage sites may be included in the tourist circuit. The earliest visible remains of the built heritage are
-                Geto-Dacian sites and Roman fortifications. The remains of medieval fortresses, archaeological complexes such as
+              <p>The Republic of Moldova has a rich cultural heritage which may be of great interest to tourists. 140
+                cultural
+                heritage sites may be included in the tourist circuit. The earliest visible remains of the built
+                heritage are
+                Geto-Dacian sites and Roman fortifications. The remains of medieval fortresses, archaeological complexes
+                such as
                 Orheiul Vechi.
               </p>
             </Col>
           </Row>
         </Container>
       </section>
-
       <section className="destinationCard mx-2">
-        <Container>
+        <Container fluid>
           <Row className="justify-content-md-center">
-            {destinations.map(destination => <DestinationCard destination={destination} key={destination.destinationId}/>)}
+            {destinations.map(destination => <DestinationCard destination={destination}
+                                                              key={destination.destinationId}/>)}
           </Row>
         </Container>
       </section>
-
-
     </>
   )
 };
