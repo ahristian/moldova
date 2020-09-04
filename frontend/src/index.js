@@ -11,9 +11,6 @@ import { SinglePage } from './pages/singlePage'
 import { Home } from "./pages/Home";
 import { FooterElement } from './shared/components/FooterElement'
 import { NavigationBar } from './shared/components/NavigationBar'
-
-
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import {configureStore} from '@reduxjs/toolkit'
 import reducer from './store'
 import {Provider} from 'react-redux'
@@ -29,7 +26,7 @@ const Routing = (store) => (
         <Route exact path="/traditions" component={Traditions}/>
         <Route exact path="/foods" component={Food}/>
         <Route exact path="/destinations" component={DestinationsPage}/>
-        <Route exact path="/destinations/:destinationId" component={SinglePage}/>
+        <Route exact path="/destinations/:destinationId" component={SinglePage}  destinationId=":destinationId"/>
         <Route component={Home}/>
       </Switch>
     </BrowserRouter>
