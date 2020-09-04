@@ -15,7 +15,7 @@ const destinationsPhotoSlice = createSlice({
 
 export const {getAllDestinationPhotos} = destinationsPhotoSlice.actions
 export const fetchDestinationPhotosByDestinationId = (destinationId) => async dispatch => {
-  const {data} = await httpConfig(`/apis/destinations/${destinationId}/`);
+  const {data} = await httpConfig(`/apis/destinations/${destinationId}`);
   dispatch(getAllDestinationPhotos(data))
 }
 export default destinationsPhotoSlice.reducer
