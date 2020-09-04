@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 export const FooterElement = () => {
   return (
@@ -12,22 +12,18 @@ export const FooterElement = () => {
         <Container className="footer-fluid" fluid>
           <Container>
             <Row>
-              <Col sm={6}>
-                <p className="footer-p1">The website was created by: </p>
-              </Col>
-              <Col sm={6}>
 
-                  <p className="name"> Andrei Hristian
-                    <a href="https://www.linkedin.com/in/andrei-hristian-a673551b3/" target="_blank" rel="noopener noreferrer" >
-                    <FontAwesomeIcon className="fa-2x" id="linkedInIcon" icon={["fab", "linkedin"]}/>
-                    </a>
-                    <a href="https://github.com/ahristian?tab=repositories" target="_blank" rel="noopener noreferrer" >
-                      <FontAwesomeIcon className="fa-2x" id="faGithub" icon={faGithub}/>
-                    </a>
-                  </p>
+                <p className="footer-p1">The website was created by:
+                 <a href="https://www.devandrei.com/">Andrei Hristian</a></p>
+                  <a href="https://www.linkedin.com/in/andrei-hristian-a673551b3/" target="_blank"
+                     rel="noopener noreferrer">
+                    <FontAwesomeIcon className="fa-2x" id="faLinkedin" icon={faLinkedin}/>
+                  </a>
+                  <a href="https://github.com/ahristian?tab=repositories" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon className="fa-2x" id="faGithub" icon={faGithub}/>
+                  </a>
 
 
-              </Col>
             </Row>
             <Row>
               <Col>
