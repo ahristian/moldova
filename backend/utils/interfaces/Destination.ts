@@ -6,5 +6,6 @@ export interface Destination {
     destinationLocation: string;
     destinationTitle: string;
     destinationImageUrl: string;
+    destinationImage: string;
 
 }
