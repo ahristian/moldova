@@ -12,7 +12,6 @@ export const FooterElement = () => {
         <Container className="footer-fluid" fluid>
           <Container>
             <Row>
-
                 <p className="footer-p1">The website was created by:
                  <a href="https://www.devandrei.com/">Andrei Hristian</a></p>
                   <a href="https://www.linkedin.com/in/andrei-hristian-a673551b3/" target="_blank"
@@ -22,8 +21,6 @@ export const FooterElement = () => {
                   <a href="https://github.com/ahristian?tab=repositories" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon className="fa-2x" id="faGithub" icon={faGithub}/>
                   </a>
-
-
             </Row>
             <Row>
               <Col>
