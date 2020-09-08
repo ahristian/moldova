@@ -1,25 +1,23 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Popup from "reactjs-popup"
-import Card from 'react-bootstrap/Card'
-import Carousel from 'react-bootstrap/Carousel'
+import { Button } from 'react-bootstrap'
 
-
-export const  DestinationElement= (props) => {
+export const DestinationElement = (props) => {
   const {destinationPhoto} = props
   return (
     <>
       <div className="destinationEach mx-1 my-3">
-
-      <Popup
-        trigger={<a href="#">
-          <img className="destinationEachImage"  src={destinationPhoto.destinationPhotoUrl}
-                                  alt={destinationPhoto.destinationTitle}/></a> }
-        modal closeOnDocumentClick>
-        <img className="image d-block w-100" src={destinationPhoto.destinationPhotoUrl}  alt={destinationPhoto.destinationTitle}/>
-      </Popup>
-
-        </div>
-
+        <Popup
+          trigger={
+            <Button variant="outline-light">
+              <img className="destinationEachImage" src={destinationPhoto.destinationPhotoUrl}
+                   alt={destinationPhoto.destinationTitle}/>
+            </Button>}
+          modal closeOnDocumentClick>
+          <img className="image d-block w-100" src={destinationPhoto.destinationPhotoUrl}
+               alt={destinationPhoto.destinationTitle}/>
+        </Popup>
+      </div>
     </>
   )
 }
