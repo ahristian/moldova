@@ -1,10 +1,7 @@
 import React from "react"
-import Popup from 'reactjs-popup'
 import { Container } from 'react-bootstrap'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Card from 'react-bootstrap/Card'
-import martisor from '../shared/images/martisor.jpg'
 
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAllTraditions } from '../store/tradition'
@@ -15,12 +12,9 @@ export const Traditions = () => {
     const dispatch = useDispatch()
     const sideEffects = () =>  {
       dispatch(fetchAllTraditions())
-
     }
     React.useEffect(sideEffects, [])
     const traditions = useSelector(state => state.traditions ? state.traditions : []);
-    console.table(traditions)
-
 
     return (
     <>
@@ -40,7 +34,7 @@ export const Traditions = () => {
       <section className="traditionCard">
         <Container>
           <Row md={8} className="justify-content-md-center">
-            {traditions.map(tradition => <TraditionCard tradition={tradition}/>)}
+            {traditions.map(tradition => <TraditionCard tradition={tradition} key={tradition.traditionId}/>)}
           </Row>
         </Container>
       </section>
