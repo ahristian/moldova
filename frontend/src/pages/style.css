@@ -2,21 +2,25 @@
 * {
     font-size: 18px;
 }
+
 /* Navigation */
 .navbar {
     padding: 0.5rem 1rem;
 }
+
 .navbar-dark .navbar-nav .nav-link {
     font-size: 22px;
     margin-right: 1rem;
     text-space: 1px;
     letter-spacing: 2px;
 }
+
 .navbar-dark .navbar-brand {
     font-size: 30px;
     padding-left: 3rem;
     letter-spacing: 2px;
 }
+
 /*  Main Page */
 .bg-img {
     width: 100%;
@@ -32,9 +36,10 @@
     font-weight: 300;
     color: white;
     margin: 2rem 2rem 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     border: none;
 }
+
 .text-cover:hover {
     color: white;
     background-color: #212121;
@@ -45,12 +50,14 @@
     margin: 5rem 0 4rem;
     text-align: center;
 }
+
 .main-map {
     padding: 0 1rem;
     text-align: justify;
 }
-.main-map img{
-   padding-left: 2rem;
+
+.main-map img {
+    padding-left: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -59,11 +66,13 @@
     margin: 5rem 0 3rem;
 
 }
+
 .section-mainPicture p {
     color: white;
     font-size: 140%;
     width: 50%;
 }
+
 .imageBackgroundOrhei {
     background-image: linear-gradient(45deg, dimgrey, transparent 50%), url("../shared/images/orheiVechi.png");
     background-size: cover;
@@ -71,54 +80,65 @@
     background-repeat: no-repeat;
     height: 50vh;
 }
+
 /* section-mainWhen */
 .section-mainWhen h2 {
     text-align: center;
     margin: 2rem 0 3rem;
 }
+
 .section-mainWhen img {
     border: 1px solid black;
     width: 110%;
     margin: 1rem auto;
 
 }
-.section-mainWhen  {
-   margin: 4rem  auto 8rem;
+
+.section-mainWhen {
+    margin: 4rem auto 8rem;
 
 }
 
 /*****Footer ******/
 .footer-fluid {
     background-color: #535c68;
-    padding: 2rem 1rem ;
+    padding: 2rem 1rem;
 }
+
 .footer-p1 {
- text-align: right;
+    text-align: right;
     padding-top: 5px;
 }
+
 .footer-fluid p {
     color: white;
     font-size: 25px;
 }
+
 .Footer-Note {
     text-align: center;
     color: white;
 }
+
 .footer-fluid a {
     margin-left: 1rem;
     color: #c1a445;
 }
+
 .footer-fluid a:hover {
     color: blue;
 }
+
 .footer-p1 a {
     color: white;
     font-size: 25px;
 }
+
 .name:hover {
     color: #c1a445;
 
 }
+
 /**********************  Destinations *****************************************************/
 .destination h1 {
     text-align: center;
@@ -129,38 +149,43 @@
     margin: 3rem 1rem 5rem;
     padding-bottom: 1rem;
 }
+
 .destinationCardElement {
     border: 1px solid #4b4a49;
     border-radius: 0.5rem;
 }
-.destinationCardElement:hover{
+
+.destinationCardElement:hover {
     border: 1px solid #4b4a49;
     box-shadow: 2px 2px 2rem #393939;
     border-radius: 0.5rem;
     color: #212121;
     text-decoration: none;
 }
+
 .destinationCardElement img {
     width: 100%;
     height: 20vw;
     object-fit: cover;
     padding-bottom: 1rem;
 }
+
 .destinationCardElement {
     width: 35rem;
 }
 
 /*****************************Destination Each Page *****************************/
-.destinationEach{
+.destinationEach {
     margin: 3rem 1rem 5rem;
     border: none;
-
 }
-.destinationEachImage  {
+
+.destinationEachImage {
     width: 100%;
     height: 15vw;
     object-fit: cover;
 }
+
 .destinationTitle {
     text-align: center;
 }
@@ -169,6 +194,7 @@
     font-size: 120%;
     font-weight: bold;
 }
+
 .singlePageText {
     margin-top: 1rem;
     text-align: justify;
@@ -179,26 +205,32 @@
     text-align: center;
     margin: 5rem 0 3rem;
 }
+
 .food p {
     text-align: justify;
 }
+
 .foodCard {
     margin: 3rem 1rem 5rem;
 }
+
 .foodCardElement {
     border: 1px solid #323232;
     border-radius: 0 0 0.5rem 0.5rem;
 }
+
 .foodCardElement:hover {
     border: 1px solid #4b4a49;
     box-shadow: 2px 2px 2rem #393939;
     border-radius: 0 0 0.5rem 0.5rem;
 }
+
 .foodCardElement img {
     width: 100%;
     height: 20vw;
     object-fit: cover;
 }
+
 .foodCardElement p {
     font-size: 16px;
 }
@@ -208,37 +240,128 @@
     text-align: center;
     margin: 5rem 0 3rem;
 }
+
 .tradition p {
     text-align: justify;
 }
+
 .traditionCard {
     margin: 3rem 1rem 5rem;
 }
+
 .traditionCardElement {
     border: 1px solid #323232;
     border-radius: 0 0 0.5rem 0.5rem;
 }
+
 .traditionCardElement:hover {
     border: 1px solid #4b4a49;
     box-shadow: 2px 2px 2rem #393939;
     border-radius: 0 0 0.5rem 0.5rem;
 }
+
 .traditionCardElement img {
     width: 100%;
     height: 20vw;
     object-fit: cover;
 }
+
 .traditionCardElement p {
     font-size: 16px;
 }
 
 /****************************************   END  ****************************************************/
-@media only screen and (max-width: 767px) {
-     .navbar-brand {
+
+/********** Ipad size *************/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .navbar-brand {
         margin: 0;
-        padding: 0 ;
-         font-size: 20px;
+        padding: 1rem;
+        font-size: 24px;
     }
+
+    .navbar-dark .navbar-brand {
+        font-size: 24px;
+        padding-left: 0;
+        letter-spacing: 2px;
+    }
+
+    .text-cover {
+        font-size: 35px;
+        text-align: left;
+        margin: 1.6rem 0;
+        padding: 0;
+    }
+
+    .main-map p {
+        margin-left: 5rem;
+    }
+
+    .section-mainPicture p {
+        padding: 1rem 1rem;
+        color: white;
+        font-size: 160%;
+        width: 80%;
+        height: 90%;
+    }
+
+    .imageBackgroundOrhei {
+        background-image: linear-gradient(45deg, dimgrey 35%, transparent), url("../shared/images/orheiVechi.png");
+    }
+
+    .section-mainWhen {
+        margin: 0 1rem 5rem;
+        border: none;
+        text-align: justify;
+    }
+
+    .section-mainWhen img {
+        margin-top: 10rem;
+        border: 1px solid black;
+        width: 100%;
+    }
+
+    .destinationCardElement img {
+        width: 100%;
+        height: 40vw;
+        object-fit: cover;
+        padding-bottom: 1rem;
+    }
+
+    .destinationCardElement {
+        width: 18rem;
+    }
+
+    .destination-title {
+        height: 5vw;
+        text-align: center;
+    }
+
+    .footer-p1 {
+        text-align: left;
+        padding-top: 5px;
+    }
+
+    .Footer-Note {
+        text-align: center;
+        color: white;
+    }
+
+    .footer-fluid a {
+        margin-left: 1rem;
+        color: #c1a445;
+    }
+
+}
+
+/********** Mobile size *************/
+@media only screen and (max-width: 767px) {
+    .navbar-brand {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+    }
+
     .navbar-dark .navbar-brand {
         font-size: 20px;
         padding-left: 0;
@@ -252,33 +375,59 @@
         padding: 0;
     }
 
-    .section-mainPicture p {
-        padding: 2rem 1rem;
-        color: white;
-        font-size: 100%;
-        width: 80%;
-        height:90%;
+    .main-map img {
+        padding-left: 1rem;
+        margin-bottom: 2rem;
     }
+
+    .section-mainPicture p {
+        padding: 1rem 1rem;
+        color: white;
+        font-size: 95%;
+        width: 85%;
+        height: 90%;
+    }
+
     .imageBackgroundOrhei {
         background-image: linear-gradient(45deg, dimgrey 35%, transparent), url("../shared/images/orheiVechi.png");
     }
-    .section-mainWhen .card {
-        margin: 0 1rem 5rem;
+
+    .section-mainWhen {
+        margin: 0 1rem 4rem;
         border: none;
+        text-align: justify;
     }
-    .section-mainWhen .card img {
+
+    .section-mainWhen img {
         margin-top: 1rem;
         border: 1px solid black;
         width: 100%;
     }
+
+    .footer-p1 {
+        text-align: left;
+        padding-top: 5px;
+    }
+
+    .Footer-Note {
+        text-align: center;
+        color: white;
+    }
+
+    .footer-fluid a {
+        margin-left: 1rem;
+        color: #c1a445;
+    }
+
     .destinationCardElement img {
-        width: 100%;
+        width: 95%;
         height: 40vw;
         object-fit: cover;
         padding-bottom: 1rem;
     }
+
     .destinationCardElement {
-    width: 18rem;
+        width: 18rem;
     }
 }
 
