@@ -1,10 +1,7 @@
 import React from "react"
-import Popup from 'reactjs-popup'
 import { Container } from 'react-bootstrap'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Card from 'react-bootstrap/Card'
-import mamaliga from '../shared/images/mamaliga.jpg'
 import {useDispatch, useSelector} from 'react-redux'
 import { fetchAllFoods } from '../store/food'
 import { FoodCard } from '../ui/FoodCard'
@@ -13,11 +10,9 @@ export const Food = () => {
   const dispatch = useDispatch()
   const sideEffects = () =>  {
     dispatch(fetchAllFoods())
-
   }
   React.useEffect(sideEffects, [])
   const foods = useSelector(state => state.foods ? state.foods : []);
-  console.table(foods)
 
   return (
     <>
@@ -34,11 +29,10 @@ export const Food = () => {
           </Row>
         </Container>
       </section>
-
       <section className="foodCard">
         <Container>
           <Row md={8} className="justify-content-md-center">
-            {foods.map(food => <FoodCard food={food}/>)}
+            {foods.map(food => <FoodCard food={food} key={food.foodId}/>)}
           </Row>
         </Container>
       </section>
