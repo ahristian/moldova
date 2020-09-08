@@ -7,7 +7,7 @@ import { Route, Switch } from "react-router";
 import { Traditions } from "./pages/Traditions";
 import { Food } from "./pages/Food";
 import { DestinationsPage } from "./pages/Destinations";
-import { SinglePage } from './pages/singlePage'
+import { SinglePage } from './pages/SinglePage'
 import { Home } from "./pages/Home";
 import { FooterElement } from './shared/components/FooterElement'
 import { NavigationBar } from './shared/components/NavigationBar'
