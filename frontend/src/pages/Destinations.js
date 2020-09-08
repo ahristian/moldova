@@ -1,7 +1,6 @@
 import React from "react"
 import { useDispatch, useSelector } from 'react-redux'
-
-import { CardColumns, Container } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { fetchAllDestinations } from '../store/destination'
@@ -14,9 +13,8 @@ export const DestinationsPage = () => {
   }
   React.useEffect(sideEffects, [])
   const destinations = useSelector(state => state.destinations ? state.destinations : []);
-  console.table(destinations)
 
-  return (
+   return (
     <>
       <section className="destination">
         <Container>
