@@ -8,9 +8,6 @@ import Image from 'react-bootstrap/Image'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import mapMoldova from '../shared/images/europeMoldova.png'
 import chisinau from '../shared/images/chisinau.jpg'
-import Card from 'react-bootstrap/Card'
-import { Link } from 'react-router-dom'
-
 import soroca from '../shared/images/soroca.jpg'
 import grapes from '../shared/images/grapes.jpg'
 import background from '../shared/images/background.jpg'
@@ -52,21 +49,21 @@ export const Home = () => {
           </Row>
           <Row>
             <Col md={{span: 6, offset: 3}} sm={4}>
-              <Nav.Link to="/destinations">
+              <Nav.Link href="/destinations">
               <Button variant="outline-transparent text-cover">What can I visit in Moldova?</Button>
               </Nav.Link>
             </Col>
           </Row>
           <Row>
             <Col md={{span: 7, offset: 1}} sm={4}>
-              <Nav.Link to="/traditions">
+              <Nav.Link href="/traditions">
               <Button variant="outline-transparent text-cover">What traditions are in Moldova?</Button>
                 </Nav.Link>
             </Col>
           </Row>
           <Row>
             <Col md={{span: 7, offset: 5}} sm={4}>
-              <Nav.Link to="/foodWine">
+              <Nav.Link href="/foods">
               <Button variant="outline-transparent text-cover">What are some traditional food in
                 Moldova?</Button>
               </Nav.Link>
@@ -85,10 +82,10 @@ export const Home = () => {
         </Container>
         <Container>
           <Row>
-            <Col xs={6} md={4}>
+            <Col md={4}>
               <Image src={mapMoldova} alt="Map of Moldova in the world"/>
             </Col>
-            <Col xs={12} md={8}>
+            <Col md={8}>
               <p>Moldova, officially the Republic of Moldova is a country in South Eastern Europe, bordered by
                 Romania to the west and Ukraine to the north, east, and south. The capital and the main city is
                 Chișinău.
@@ -120,8 +117,8 @@ export const Home = () => {
       </section>
       <section className="section-mainWhen">
         <Container id="thingsToKnow">
-          <Row >
-            <Col>
+          <Row>
+            <Col md={7}>
               <h2>Things to know before visiting Moldova</h2>
                 <p>
                   As other post-Soviet country it is recommended as tourist to be aware and to avoid them. The
@@ -134,8 +131,7 @@ export const Home = () => {
 
                 </p>
           </Col>
-
-          <Col>
+          <Col md={5}>
               <Image className="imageHomeBottom" src={chisinau} rounded  />
           </Col>
           </Row>
