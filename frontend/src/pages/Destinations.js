@@ -34,8 +34,8 @@ export const DestinationsPage = () => {
         </Container>
       </section>
       <section className="destinationCard mx-2">
-        <Container fluid>
-          <Row className="justify-content-md-center">
+        <Container>
+          <Row md={2} className="justify-content-center">
             {destinations.map(destination => <DestinationCard destination={destination}
                                                               key={destination.destinationId}/>)}
           </Row>
