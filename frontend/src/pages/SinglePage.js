@@ -35,11 +35,11 @@ export const SinglePage = ({match}) => {
           </Col>
         </Row>
         <Row>
-          <Col xs={8} md={7}>
+          <Col xs={4} md={6}>
             {destinationPhotos.map(destinationPhoto =><DestinationElement key={destinationPhoto.destinationPhotoId}
                                                                           destinationPhoto={destinationPhoto}/>)}
           </Col>
-          <Col xs={6} md={5}>
+          <Col xs={8} md={6}>
             {destination && (<p className="singlePageText">{destination.destinationDescription}</p>)}
             {destination && (<p className="singlePageLocation my-3">Location: {destination.destinationLocation}</p>)}
             {destination && (<p className="singlePageLocation mt-2">Contact: {destination.destinationContact}</p>)}
