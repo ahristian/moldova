@@ -38,31 +38,31 @@ export const Home = () => {
         <header onLoad={randomScreen()} >
           <Container fluid className="bg-img" style={{backgroundImage: "url(" + background + ")"}}>
           <Row className="py-2">
-            <Col md={{span: 8, offset: 4}} sm={4}>
+            <Col md={{span: 8, offset: 4}} sm={8}>
               <Button href="#idMoldova" variant="outline-transparent text-cover text-center">Where is Moldova?</Button>
             </Col>
           </Row>
           <Row>
-            <Col md={{span: 6, offset: 6}} sm={4}>
+            <Col md={{span: 6, offset: 6}} sm={8}>
               <Button href="#thingsToKnow" id="btn-travel" variant="outline-transparent text-cover text-right">Things to know before to travel</Button>
               </Col>
           </Row>
           <Row>
-            <Col md={{span: 6, offset: 3}} sm={4}>
+            <Col md={{span: 8, offset: 3}} sm={8}>
               <Nav.Link href="/destinations">
               <Button variant="outline-transparent text-cover">What can I visit in Moldova?</Button>
               </Nav.Link>
             </Col>
           </Row>
           <Row>
-            <Col md={{span: 7, offset: 1}} sm={4}>
+            <Col md={{span: 9, offset: 1}} sm={8}>
               <Nav.Link href="/traditions">
               <Button variant="outline-transparent text-cover">What traditions are in Moldova?</Button>
                 </Nav.Link>
             </Col>
           </Row>
           <Row>
-            <Col md={{span: 7, offset: 5}} sm={4}>
+            <Col md={{span: 8, offset: 4}} sm={8}>
               <Nav.Link href="/foods">
               <Button variant="outline-transparent text-cover">What are some traditional food in
                 Moldova?</Button>
@@ -82,10 +82,10 @@ export const Home = () => {
         </Container>
         <Container>
           <Row>
-            <Col md={4}>
+            <Col md={6}>
               <Image src={mapMoldova} alt="Map of Moldova in the world"/>
             </Col>
-            <Col md={8}>
+            <Col md={6}>
               <p>Moldova, officially the Republic of Moldova is a country in South Eastern Europe, bordered by
                 Romania to the west and Ukraine to the north, east, and south. The capital and the main city is
                 Chișinău.
