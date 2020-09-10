@@ -11,20 +11,15 @@ import chisinau from '../shared/images/chisinau.jpg'
 import soroca from '../shared/images/soroca.jpg'
 import grapes from '../shared/images/grapes.jpg'
 import background from '../shared/images/background.jpg'
-import moldovaSkies from '../shared/images/moldova-de-la-inaltimea.jpg'
-import tighina from '../shared/images/tighina.jpg'
+import moldovaSkies from '../shared/images/ovechi1.jpg'
+import tighina from '../shared/images/bender2.jpg'
 import orheiVechi from '../shared/images/orheiVechi.png'
+import saharna from '../shared/images/saharna4.jpg'
 import someWhereMoldova from '../shared/images/somewhereMoldova.jpg'
 import Nav from 'react-bootstrap/Nav'
 
 function randomScreen () {
-let images = [soroca,
-  grapes,
-  moldovaSkies,
-  background,
-  tighina,
-  orheiVechi,
-  someWhereMoldova];
+let images = [soroca, grapes, moldovaSkies, background, tighina, orheiVechi, saharna, someWhereMoldova];
 setInterval(function () {
   document.getElementsByClassName('bg-img')[0].setAttribute('style', 'background-image: url("' + images[0] + '")');
   images.splice(images.length, 0, images[0]);

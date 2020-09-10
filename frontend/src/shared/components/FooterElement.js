@@ -22,11 +22,6 @@ export const FooterElement = () => {
                     <FontAwesomeIcon className="fa-2x" id="faGithub" icon={faGithub}/>
                   </a>
             </Row>
-            <Row>
-              <Col>
-                <p className="Footer-Note">2020 Albuquerque, New Mexico </p>
-              </Col>
-            </Row>
           </Container>
         </Container>
       </footer>
