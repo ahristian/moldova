@@ -18,7 +18,7 @@ export async function signUpProfileController(request: Request, response: Respon
         console.log(profileActivationToken)
 
         const message = `<h2>Welcome to Moldova Travel Guide.</h2>
-<p>In order to start save destinations, you must confirm your account </p>
+<p>In order to start saving destinations, you must confirm your account </p>
 <p><a href="${basePath}">${basePath}</a></p>
 `
 
