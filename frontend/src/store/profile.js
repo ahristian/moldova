@@ -1,19 +1,19 @@
 import {createSlice} from '@reduxjs/toolkit'
 import {httpConfig} from "../utils/httpConfig"
 
-const foodSlice = createSlice({
-  name: "food",
+const profileSlice = createSlice({
+  name: "profile",
   initialState: [],
   reducers: {
-    getAllFoods: (foods, action) => {
+    getProfileById: (profile, action) => {
       const {payload} = action
       return payload
     }
   }
 })
-export const {getAllFoods} = foodSlice.actions
-export const fetchAllFoods = () => async dispatch => {
-  const {data} = await httpConfig(`/apis/foods/`)
-  dispatch(getAllFoods(data))
+export const {getProfileById} = profileSlice.actions
+export const fetchProfileById = (profileId) => async dispatch => {
+  const {data} = await httpConfig(`/apis/profile/${profileId}`);
+  dispatch(getProfileById(data))
 }
-export default foodSlice.reducer
+export default profileSlice.reducer

@@ -15,6 +15,9 @@ export const NavigationBar = () => {
             <Nav.Link href="/aboutMoldova">About Moldova</Nav.Link>
             <Nav.Link href="/foods">Food</Nav.Link>
             <Nav.Link href="/traditions">Traditions</Nav.Link>
+            <Nav.Link href="/profile/:profileId">Profile</Nav.Link>
+            <Nav.Link href="/sign-in">Sign-in</Nav.Link>
+            <Nav.Link href="/sign-out">Sign-out</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
