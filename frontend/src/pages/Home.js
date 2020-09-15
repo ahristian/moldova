@@ -4,10 +4,6 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
-import Image from 'react-bootstrap/Image'
-import Jumbotron from 'react-bootstrap/Jumbotron'
-import mapMoldova from '../shared/images/europeMoldova.png'
-import chisinau from '../shared/images/chisinau.jpg'
 import soroca from '../shared/images/soroca.jpg'
 import grapes from '../shared/images/grapes.jpg'
 import background from '../shared/images/background.jpg'
@@ -17,6 +13,9 @@ import orheiVechi from '../shared/images/orheiVechi.png'
 import saharna from '../shared/images/saharna4.jpg'
 import someWhereMoldova from '../shared/images/somewhereMoldova.jpg'
 import Nav from 'react-bootstrap/Nav'
+import { fetchAllDestinations } from '../store/destination'
+import { DestinationCard } from '../ui/DestinationCard'
+import { useDispatch, useSelector } from 'react-redux'
 
 function randomScreen () {
 let images = [soroca, grapes, moldovaSkies, background, tighina, orheiVechi, saharna, someWhereMoldova];
@@ -26,20 +25,31 @@ setInterval(function () {
   images.splice(0, 1);
 }, 7000)
   }
-
 export const Home = () => {
+
+  const dispatch = useDispatch()
+  const sideEffects = () => {
+    dispatch(fetchAllDestinations())
+  }
+  React.useEffect(sideEffects, [])
+  const destinations = useSelector(state => state.destinations ? state.destinations : []);
+
   return (
     <>
         <header onLoad={randomScreen()} >
           <Container fluid className="bg-img" style={{backgroundImage: "url(" + background + ")"}}>
           <Row className="py-2">
             <Col md={{span: 8, offset: 4}} sm={8}>
-              <Button href="#idMoldova" variant="outline-transparent text-cover text-center">Where is Moldova?</Button>
+              <Nav.Link href="/aboutMoldova">
+              <Button variant="outline-transparent text-cover text-center">Where is Moldova?</Button>
+              </Nav.Link>
             </Col>
           </Row>
           <Row>
             <Col md={{span: 6, offset: 6}} sm={8}>
-              <Button href="#thingsToKnow" id="btn-travel" variant="outline-transparent text-cover text-right">Things to know before to travel</Button>
+              <Nav.Link href="/aboutMoldova">
+              <Button id="btn-travel" variant="outline-transparent text-cover text-right">Things to know before to travel</Button>
+              </Nav.Link>
               </Col>
           </Row>
           <Row>
@@ -66,69 +76,28 @@ export const Home = () => {
           </Row>
           </Container>
       </header>
-
-      <section  id="idMoldova" className="main-map">
+      <section className="destination">
         <Container>
           <Row>
             <Col>
-              <h2>Moldova is in South East part of Europe</h2>
+              <h1>Things Not to Miss in Moldova</h1>
+              <p>The Republic of Moldova has a rich cultural heritage which may be of great interest to tourists. 140
+                cultural
+                heritage sites may be included in the tourist circuit. The earliest visible remains of the built
+                heritage are
+                Geto-Dacian sites and Roman fortifications. The remains of medieval fortresses, archaeological complexes
+                such as
+                Orheiul Vechi.
+              </p>
             </Col>
           </Row>
         </Container>
+      </section>
+      <section className="destinationCard mx-2">
         <Container>
-          <Row>
-            <Col md={6}>
-              <Image src={mapMoldova} alt="Map of Moldova in the world"/>
-            </Col>
-            <Col md={6}>
-              <p>Moldova, officially the Republic of Moldova is a country in South Eastern Europe, bordered by
-                Romania to the west and Ukraine to the north, east, and south. The capital and the main city is
-                Chișinău.
-              </p>
-              <p>The Republic of Moldova has a rich cultural heritage which may be of great interest to tourists. The
-                remains of medieval fortresses like Tighina and Soroca, archaeological complexes such as Orheuil Vechi,
-                cave monasteries, nobles’ mansions and peasant houses offer a diversity of visitor attractions.
-              </p>
-              <p>The Moldovan border looks like a grape bunch, and somehow this defines the culture and traditions of
-                this nation. The land is one the best in the world for growing grapes and this makes Moldova a very
-                special country in terms of wines. The wine has long tradition here there are many underground
-                limestone tunnels. The tunnels are lined wall-to-wall with bottles from 60km (37miles) to 120km
-                (75miles) long tunnels, dating from the 15th century wine.
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-      <section className="section-mainPicture">
-        <Jumbotron className="imageBackgroundOrhei" fluid>
-          <Container >
-            <p>
-              Moldova has plenty beautiful nature and architecture. The hospitality tradition stays hard in Moldovan`s
-              peoples heart and they are happy to assist you during your visit.Travel to any corner of Moldova and you
-              will be welcomed by warm and friendly people with food and wine as welcome.
-            </p>
-          </Container>
-        </Jumbotron>
-      </section>
-      <section className="section-mainWhen">
-        <Container id="thingsToKnow">
-          <Row>
-            <Col md={7}>
-              <h2>Things to know before visiting Moldova</h2>
-                <p>
-                  As other post-Soviet country it is recommended as tourist to be aware and to avoid them. The
-                    biggest risk to travelers remains petty theft, such as pick pocketing. This generally occurs in the
-                    usual high-risk areas like crowded city streets in Chisinau and on buses and trains, especially
-                    international ones. Travelers should only use official taxis "yellow ones" so you don't get ripped
-                    off.
-                    Be on the lookout for overcharging by taxi drivers and restaurant or bar staff. To avoid this issue,
-                    agree on taxi fare before getting in the car and ask to see menu prices in writing before ordering.
-
-                </p>
-          </Col>
-          <Col md={5}>
-              <Image className="imageHomeBottom" src={chisinau} rounded  />
-          </Col>
+          <Row md={2} className="justify-content-center">
+            {destinations.map(destination => <DestinationCard destination={destination}
+                                                              key={destination.destinationId}/>)}
           </Row>
         </Container>
       </section>

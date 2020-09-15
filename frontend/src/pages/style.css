@@ -47,13 +47,14 @@
 
 /*  section Main Map */
 .main-map h2 {
-    margin: 5rem 0 4rem;
+    margin: 3rem 0 4rem;
     text-align: center;
 }
 
 .main-map {
     padding: 0 1rem;
     text-align: justify;
+    margin-bottom: 6rem;
 }
 
 .main-map img {
@@ -62,10 +63,6 @@
 }
 
 /* section-mainPicture */
-.section-mainPicture {
-    margin: 5rem 0 3rem;
-
-}
 
 .section-mainPicture p {
     color: white;
@@ -84,13 +81,11 @@
 /* section-mainWhen */
 .section-mainWhen h2 {
     text-align: center;
-    margin: 2rem 0 3rem;
 }
 
 .section-mainWhen img {
     border: 1px solid black;
     width: 110%;
-    margin: 6rem 0 0;
 
 }
 
@@ -141,25 +136,26 @@
 
 /**********************  Destinations *****************************************************/
 .destination h1 {
-    margin: 5rem 0 3rem;
+    margin: 3rem 0 3rem;
     text-align: center;
 }
 
 .destinationCard {
     margin: 3rem 1rem 5rem;
-    padding-bottom: 1rem;
     text-align: center;
 }
 
 .destinationCardElement {
     border: 1px solid #4b4a49;
-    border-radius: 0.5rem;
+    -moz-border-radius-bottomright: 0.5rem ;
+    -moz-border-radius-bottomleft: 0.5rem ;
 }
 
 .destinationCardElement:hover {
     border: 1px solid #4b4a49;
     box-shadow: 2px 2px 2rem #393939;
-    border-radius: 0.5rem;
+    -moz-border-radius-bottomright: 0.5rem ;
+    -moz-border-radius-bottomleft: 0.5rem ;
     color: #212121;
     text-decoration: none;
 }
@@ -168,7 +164,6 @@
     width: 100%;
     height: 20vw;
     object-fit: cover;
-    padding-bottom: 1rem;
 }
 
 
@@ -223,7 +218,7 @@
     border-radius: 0 0 0.5rem 0.5rem;
 }
 
-.foodCardElement img {
+.foodCardElement input {
     width: 100%;
     height: 20vw;
     object-fit: cover;
@@ -258,7 +253,7 @@
     border-radius: 0 0 0.5rem 0.5rem;
 }
 
-.traditionCardElement img {
+.traditionCardElement input {
     width: 100%;
     height: 20vw;
     object-fit: cover;
