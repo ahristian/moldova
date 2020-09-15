@@ -12,7 +12,7 @@ export const NavigationBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end pr-4 pl-2">
           <Nav className="justify-content-start">
             <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/destinations">Destinations</Nav.Link>
+            <Nav.Link href="/aboutMoldova">About Moldova</Nav.Link>
             <Nav.Link href="/foods">Food</Nav.Link>
             <Nav.Link href="/traditions">Traditions</Nav.Link>
           </Nav>
