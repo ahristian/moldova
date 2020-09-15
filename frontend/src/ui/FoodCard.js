@@ -1,7 +1,6 @@
 import React from 'react'
 import Popup from "reactjs-popup"
 import Card from 'react-bootstrap/Card'
-import { Button } from 'react-bootstrap'
 
 
 export const FoodCard = (props) => {
@@ -9,12 +8,16 @@ export const FoodCard = (props) => {
 
   return (
     <>
+
       <Card className="foodCardElement mx-3 my-3" style={{width: '25rem'}} >
+
         <Popup
-          trigger={<Button variant="outline-light"><img src={food.foodImageUrl} alt={food.foodTitle}/></Button> }
+          trigger={<input type="image" src={food.foodImageUrl} alt={food.foodTitle}/>
+          }
           modal closeOnDocumentClick>
           <img style={{height: "40vw", object: "cover"}} alt={food.foodTitle} src={food.foodImageUrl}/>
         </Popup>
+
         <Card.Body>
           <Card.Title className="text-center">
             {food.foodTitle}
