@@ -46,17 +46,8 @@ export const Home = () => {
             </Col>
           </Row>
           <Row>
-            <Col md={{span: 6, offset: 6}} sm={8}>
-              <Nav.Link href="/aboutMoldova">
-              <Button id="btn-travel" variant="outline-transparent text-cover text-right">Things to know before to travel</Button>
-              </Nav.Link>
-              </Col>
-          </Row>
-          <Row>
             <Col md={{span: 8, offset: 3}} sm={8}>
-              <Nav.Link href="/destinations">
-              <Button variant="outline-transparent text-cover">What can I visit in Moldova?</Button>
-              </Nav.Link>
+              <Button href="#destination" variant="outline-transparent text-cover">What can I visit in Moldova?</Button>
             </Col>
           </Row>
           <Row>
@@ -93,7 +84,7 @@ export const Home = () => {
           </Row>
         </Container>
       </section>
-      <section className="destinationCard mx-2">
+      <section id="destination" className="destinationCard mx-2">
         <Container>
           <Row md={2} className="justify-content-center">
             {destinations.map(destination => <DestinationCard destination={destination}
