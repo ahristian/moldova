@@ -1,6 +1,7 @@
 import express, { Application } from 'express'
 import morgan from 'morgan'
 import DestinationRoutes from './routes/destination.routes';
+import ProfileRoutes from './routes/profile.routes';
 import TraditionRoutes from './routes/tradition.routes';
 import SaveRoutes from './routes/save.routes';
 import FoodRoutes from './routes/food.routes';
@@ -60,6 +61,7 @@ export class App {
         this.app.use('/apis/destinations/', DestinationRoutes);
         this.app.use('/apis/traditions/', TraditionRoutes);
         this.app.use('/apis/foods/', FoodRoutes);
+        this.app.use('/apis/profile/', ProfileRoutes);
         this.app.use('/apis/sign-in', SignInRouter);
         this.app.use('/apis/sign-out', SignOutRoute);
         this.app.use('/apis/sign-up', SignupRoute);
