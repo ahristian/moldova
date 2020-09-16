@@ -1,5 +1,5 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {FormDebugger} from "../../FormDebugger";
+import {FormDebugger} from "../../../utils/FormDebugger";
 import React from "react";
 
 export const SignUpFormContent = (props) => {
@@ -19,6 +19,35 @@ export const SignUpFormContent = (props) => {
     <>
       <form onSubmit={handleSubmit}>
         {/*controlId must match what is passed to the initialValues prop*/}
+
+        <div className="form-group">
+          <label htmlFor="profileUserName">User Name</label>
+          <div className="input-group">
+            <div className="input-group-prepend">
+              <div className="input-group-text">
+                <FontAwesomeIcon icon="user-alien"/>
+              </div>
+            </div>
+            <input
+              className="form-control"
+              name="profileUserName"
+              type="text"
+              value={values.profileUserName}
+              placeholder="Enter User Name"
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
+          </div>
+          {
+            errors.profileUserName && touched.profileUserName && (
+              <div className="alert alert-danger">
+                {errors.profileUserName}
+              </div>
+            )
+
+          }
+        </div>
+
         <div className="form-group">
           <label htmlFor="profileEmail">Email Address</label>
           <div className="input-group">
@@ -94,63 +123,6 @@ export const SignUpFormContent = (props) => {
           )}
         </div>
 
-
-        <div className="form-group">
-          <label htmlFor="profileHandle">@Handle</label>
-          <div className="input-group">
-            <div className="input-group-prepend">
-              <div className="input-group-text">
-                <FontAwesomeIcon icon="dove"/>
-              </div>
-            </div>
-            <input
-              className="form-control"
-              name="profileAtHandle"
-              type="text"
-              value={values.profileAtHandle}
-              placeholder="@Handle"
-              onChange={handleChange}
-              onBlur={handleBlur}
-
-            />
-          </div>
-          {
-            errors.profileAtHandle && touched.profileAtHandle && (
-              <div className="alert alert-danger">
-                {errors.profileAtHandle}
-              </div>
-            )
-          }
-        </div>
-
-
-        <div className="form-group">
-          <label htmlFor="profilePhone">Phone Number</label>
-          <div className="input-group">
-            <div className="input-group-prepend">
-              <div className="input-group-text">
-                <FontAwesomeIcon icon="phone"/>
-              </div>
-            </div>
-            <input
-              className="form-control"
-              name="profilePhone"
-              type="text"
-              value={values.profilePhone}
-              placeholder="Enter email"
-              onChange={handleChange}
-              onBlur={handleBlur}
-            />
-          </div>
-          {
-            errors.profilePhone && touched.profilePhone && (
-              <div className="alert alert-danger">
-                {errors.profilePhone}
-              </div>
-            )
-
-          }
-        </div>
         <div className="form-group">
           <button className="btn btn-primary mb-2" type="submit">Submit</button>
           <button
@@ -164,7 +136,5 @@ export const SignUpFormContent = (props) => {
       </form>
       {status && (<div className={status.type}>{status.message}</div>)}
     </>
-
-
   )
 };

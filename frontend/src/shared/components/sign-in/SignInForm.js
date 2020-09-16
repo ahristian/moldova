@@ -1,10 +1,11 @@
 import React from 'react';
-import {httpConfig} from "../../../utils/http-config";
+import {httpConfig} from "../../../utils/httpConfig";
 import {Formik} from "formik";
 import * as Yup from "yup";
 import {SignInFormContent} from "./SignInFormContent";
-import {getAuth} from "../../../actions/auth";
 import {useDispatch} from "react-redux";
+import { fetchAuth, getAuth } from '../../../store/auth'
+import * as jwtDecode from 'jwt-decode'
 
 
 
@@ -37,8 +38,8 @@ export const SignInForm = () => {
           window.localStorage.removeItem("authorization");
           window.localStorage.setItem("authorization", reply.headers["authorization"]);
           resetForm();
-          dispatch(getAuth())
-          // window.location = "/";
+          let jwtToken = jwtDecode(reply.headers["authorization"])
+          dispatch(getAuth(jwtToken))
         }
         setStatus({message, type});
       });
