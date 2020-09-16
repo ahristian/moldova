@@ -5,14 +5,14 @@ DROP TABLE IF EXISTS destination;
 DROP TABLE IF EXISTS profile;
 
 CREATE TABLE profile (
-                             profileId BINARY(16) NOT NULL,
-                             profileActivationToken VARCHAR(250) NOT NULL,
-                             profileEmail VARCHAR(250) NOT NULL,
-                             profileHash VARCHAR(250) NOT NULL,
-                             profileUserName VARCHAR(250) NOT NULL,
-                             UNIQUE KEY (profileId),
-                             UNIQUE KEY  (profileEmail),
-                             PRIMARY KEY(profileId)
+                        profileId BINARY(16) NOT NULL,
+                        profileActivationToken VARCHAR(250) NOT NULL,
+                        profileEmail VARCHAR(250) NOT NULL,
+                        profileHash VARCHAR(250) NOT NULL,
+                        profileUserName VARCHAR(250) NOT NULL,
+                        UNIQUE KEY (profileId),
+                        UNIQUE KEY (profileEmail),
+                        PRIMARY KEY (profileId)
 );
 
 INSERT INTO profile (profileId, profileActivationToken, profileEmail, profileHash, profileUserName) VALUES (UUID_TO_BIN('b85b870a-e099-4bf0-b7c5-f0e311e0d862'), '86cf855e0d46e2435eda674df725b6ba', 'hristian@gmail.com', '$argon2id$v=19$m=65536,t=3,p=1$/z0bIUc60QkXCpvEcJlhjA$zE4VS9fm//xpYAP77yftEGG1NeYys0EsTK7oa7ce7ff', 'TestUser');
