@@ -9,14 +9,13 @@
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    font-size: 22px;
-    margin-right: 1rem;
+    font-size: 20px;
     text-space: 1px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .navbar-dark .navbar-brand {
-    font-size: 25px;
+    font-size: 20px;
     padding-left: 3rem;
     letter-spacing: 2px;
 }
