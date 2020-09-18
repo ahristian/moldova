@@ -4,6 +4,7 @@ import {selectAllDestinations} from "../../utils/destination/selectAllDestinatio
 import {selectAllDestinationsByDestinationId} from "../../utils/destination/selectAllDestinationsByDestinationId";
 
 
+
 export async function getAllDestinationsController(request: Request, response: Response): Promise<Response | void> {
     try {
         const data = await selectAllDestinations()
@@ -23,6 +24,7 @@ export async function getAllDestinationsController(request: Request, response: R
             console.log(error)
         }
     }
+
 
 
 
