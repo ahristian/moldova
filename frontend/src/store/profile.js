@@ -23,5 +23,4 @@ export const fetchProfileById  = () => async (dispatch, getState)=> {
     dispatch(getProfileById(data))
   }
 }
-
 export default profileSlice.reducer

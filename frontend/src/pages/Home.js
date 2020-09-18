@@ -85,8 +85,8 @@ export const Home = () => {
         </Container>
       </section>
       <section id="destination" className="destinationCard mx-2">
-        <Container>
-          <Row md={2} className="justify-content-center">
+        <Container fluid>
+          <Row md={3} className="justify-content-center">
             {destinations.map(destination => <DestinationCard destination={destination}
                                                               key={destination.destinationId}/>)}
           </Row>

@@ -3,24 +3,25 @@ import { Container } from 'react-bootstrap'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { useDispatch, useSelector } from 'react-redux'
+import {  fetchProfileById } from '../store/profile'
+import { fetchSaveByProfileId } from '../store/saved'
 import { ProfileCard } from './ProfileCard'
-import { fetchProfileById } from '../store/profile'
-import { fetchAllDestinations } from '../store/destination'
-import { fetchAllFoods } from '../store/food'
-import { fetchDestinationProfile } from '../store/destinationByProfileId'
+import { DestinationElement } from './DestinationElement'
 
-export const Profile = () => {
+export const Profile = ({match}) => {
   const dispatch = useDispatch()
-  const sideEffects = () =>  {
-    dispatch(fetchProfileById())
-   /* dispatch(fetchDestinationProfile())*/
+  const sideEffects = () => {
+    dispatch(fetchProfileById(match.params.profileId))
+    dispatch(fetchSaveByProfileId(match.params.profileId))
   }
-  React.useEffect(sideEffects, [])
+
+  const inputs = [match.params.destinationId];
+  useEffect(sideEffects, inputs);
+
   const profile = useSelector(state => state.profile ? state.profile : []);
- /* const destinationsProfile = useSelector(state => state.destinationsProfile ? state.destinationsProfile : []);
+  const save = useSelector( state => state.save ? state.save : []);
 
-
-  console.log(destinationsProfile)*/
+  console.table(save)
   return (
     <>
       <section className="profile">
@@ -40,9 +41,13 @@ export const Profile = () => {
               <p> Your saved destinations in Moldova are:</p>
             </Col>
           </Row>
-          <Row>
-          {/*{destinationsProfile.map(destinationsProfile => <ProfileCard destinationsProfile={destinationsProfile} key={profile.profileId}/>)}
-        */}  </Row>
+        </Container>
+      </section>
+      <section className="profileDestinationCard mx-2">
+        <Container>
+          <Row md={2} className="justify-content-center">
+            {save.map(save => <ProfileCard save={save} key={save.saveDestinationId}/>)}
+          </Row>
         </Container>
       </section>
     </>

@@ -5,17 +5,18 @@ import { getAllDestinations } from '../store/destination'
 import {httpConfig} from "../utils/httpConfig"
 import Button from 'react-bootstrap/Button'
 import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 
-export const DestinationCard = (props) => {
-  const {destination} = props
+export const DestinationCard = ({destination}) => {
   const dispatch = useDispatch()
+
   const clickLike = () => {
     httpConfig.post("/apis/save/", {saveDestinationId: destination.destinationId})
       .then(reply => {
           let {message, type} = reply
           if(reply.status === 200) {
-            console.log(reply)
-            dispatch(getAllDestinations(props))
+            dispatch(getAllDestinations())
+
           }
           console.log(reply)
         }
@@ -23,17 +24,19 @@ export const DestinationCard = (props) => {
   }
   return (
     <>
-      <Nav.Link href={`/destinations/${destination?.destinationId}`}>
+
       <Card className="destinationCardElement mx-3 my-3"  >
+        <Link to={`/destinations/${destination?.destinationId}`}>
           <img src={destination.destinationImage}  alt={destination.destinationTitle}/>
+        </Link>
         <Card.Body>
         <Card.Title className="destination-title">
             {destination.destinationTitle}
          </Card.Title>
-          <Button onClick={clickLike} className="buttonSave">Save</Button>
         </Card.Body>
+          <Button onClick={clickLike} className="buttonSave">Save</Button>
       </Card>
-      </Nav.Link>
+
     </>
   )
 }

@@ -1,20 +1,23 @@
 import React from 'react'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import { DestinationElement } from './DestinationElement'
 import Nav from 'react-bootstrap/Nav'
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
 
 
 export const ProfileCard = (props) => {
-  const {profile} = props
+  const {save} = props
 
   return (
     <>
-
-
+      <Nav.Link href={`/destinations/${save?.destinationId}`}>
+        <Card className="destinationCardElement mx-3 my-3"  >
+          <img src={save.destinationImage}  alt={save.destinationTitle}/>
+          <Card.Body>
+            <Card.Title className="destination-title">
+              {save.destinationTitle}
+            </Card.Title>
+          </Card.Body>
+        </Card>
+      </Nav.Link>
 
 
 
