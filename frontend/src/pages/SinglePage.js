@@ -25,7 +25,7 @@ export const SinglePage = ({match}) => {
       ? state.destinations.find(destination => destination.destinationId === match.params.destinationId)
       : []
   });
-
+console.log(destinationPhotos)
   return (
     <>
       <Container>

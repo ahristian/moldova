@@ -5,7 +5,7 @@ import "./pages/style.css";
 import { BrowserRouter } from "react-router-dom";
 import { Route, Switch } from "react-router";
 import { Traditions } from "./pages/Traditions";
-import { Profile } from "./pages/Profile";
+import { Profile } from "./ui/Profile";
 import { Food } from "./pages/Food";
 import { SinglePage } from './pages/SinglePage'
 import { Home } from "./pages/Home";
@@ -15,6 +15,12 @@ import {configureStore} from '@reduxjs/toolkit'
 import reducer from './store'
 import {Provider} from 'react-redux'
 import { AboutMoldova } from './pages/AboutMoldova'
+import { faDove, faEnvelope, faKey, faSignInAlt, faSignOutAlt, faUser } from '@fortawesome/free-solid-svg-icons'
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
+
+library.add(faLinkedin, faEnvelope,faKey, faDove, faUser, faSignOutAlt, faSignInAlt);
 
 const store = configureStore({ reducer})
 
@@ -25,10 +31,10 @@ const Routing = (store) => (
     <BrowserRouter>
       <Switch>
         <Route exact path="/aboutMoldova" component={AboutMoldova}/>
-        <Route exact path="/profile" component={Profile}/>
+        <Route exact path="/profile/:profileId" component={Profile} profileId=":profileId"/>
         <Route exact path="/traditions" component={Traditions}/>
         <Route exact path="/foods" component={Food}/>
-        <Route exact path="/destinations/:destinationId" component={SinglePage}  destinationId=":destinationId"/>
+        <Route exact path="/destinations/:destinationId" component={SinglePage} destinationId=":destinationId"/>
         <Route component={Home}/>
       </Switch>
     </BrowserRouter>

@@ -3,33 +3,46 @@ import { Container } from 'react-bootstrap'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { useDispatch, useSelector } from 'react-redux'
-import { ProfileCard } from '../ui/ProfileCard'
+import { ProfileCard } from './ProfileCard'
 import { fetchProfileById } from '../store/profile'
+import { fetchAllDestinations } from '../store/destination'
+import { fetchAllFoods } from '../store/food'
+import { fetchDestinationProfile } from '../store/destinationByProfileId'
 
-export const Profile = ({match}) => {
+export const Profile = () => {
   const dispatch = useDispatch()
-  const effects = () => {
-    dispatch(fetchProfileById(match.params.profileId))
+  const sideEffects = () =>  {
+    dispatch(fetchProfileById())
+   /* dispatch(fetchDestinationProfile())*/
   }
-  const inputs = [match.params.profileId];
-  useEffect(effects, inputs);
-  const profiles = useSelector(state => {
-    return state.profile
-      ? state.profile.find(profile => profile.profileId === match.params.profileId)
-      : []
-  });
+  React.useEffect(sideEffects, [])
+  const profile = useSelector(state => state.profile ? state.profile : []);
+ /* const destinationsProfile = useSelector(state => state.destinationsProfile ? state.destinationsProfile : []);
+
+
+  console.log(destinationsProfile)*/
   return (
     <>
       <section className="profile">
         <Container>
           <Row>
             <Col>
-              <h1>Profile</h1>
+              {profile && (<h2 className="display-4 text-center">Hello, {profile[0]?.profileUserName}</h2>)}
             </Col>
           </Row>
           <Row>
-            {profiles.map(profile => <ProfileCard profile={profile} key={profile.profileId}/>)}
+            <Col>
+              {profile && (<p>Your email: {profile[0]?.profileEmail}</p>)}
+            </Col>
           </Row>
+          <Row>
+            <Col>
+              <p> Your saved destinations in Moldova are:</p>
+            </Col>
+          </Row>
+          <Row>
+          {/*{destinationsProfile.map(destinationsProfile => <ProfileCard destinationsProfile={destinationsProfile} key={profile.profileId}/>)}
+        */}  </Row>
         </Container>
       </section>
     </>
