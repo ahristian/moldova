@@ -5,6 +5,7 @@ import {Save} from "../../utils/interfaces/Save";
 import {selectSave} from "../../utils/save/selectSave";
 import {deleteSave} from "../../utils/save/deleteSave";
 import {insertSave} from "../../utils/save/insertSave";
+import {selectDestinationByProfileId} from "../../utils/destination/selectDestinationByProfileId";
 
 const {validationResult} = require('express-validator');
 
@@ -41,4 +42,18 @@ export async function toggleSaveController(request: Request, response: Response)
     } catch(error) {
         console.log(error);
     }
+}
+export async function getDestinationByProfileIdController (request: Request, response: Response) : Promise<Response> {
+    try {
+        const {profileId} = request.params;
+        const mySqlResult = await selectDestinationByProfileId (profileId);
+        const data = mySqlResult ?? null
+        const status: Status = {status: 200, data, message: null}
+        return response.json(status)
+
+    } catch (error) {
+        return(response.json({status: 400, data: null, message: error.message}))
+
+    }
+
 }

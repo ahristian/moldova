@@ -1,7 +1,7 @@
 import {Request, Response} from 'express';
 import {Status} from '../../utils/interfaces/Status';
 import {selectAllDestinations} from "../../utils/destination/selectAllDestinations";
-import {selectAllDestinationsByDestinationId} from "../../utils/destination/selectAllDestinationsByDestinationId";
+import {selectAllDestinationsByDestinationId} from "../../utils/save/selectAllDestinationsByDestinationId";
 
 
 
