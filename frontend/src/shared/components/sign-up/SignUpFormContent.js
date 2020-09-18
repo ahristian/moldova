@@ -1,5 +1,5 @@
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {FormDebugger} from "../../../utils/FormDebugger";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FormDebugger } from "../../../utils/FormDebugger";
 import React from "react";
 
 export const SignUpFormContent = (props) => {
@@ -19,35 +19,6 @@ export const SignUpFormContent = (props) => {
     <>
       <form onSubmit={handleSubmit}>
         {/*controlId must match what is passed to the initialValues prop*/}
-
-        <div className="form-group">
-          <label htmlFor="profileUserName">User Name</label>
-          <div className="input-group">
-            <div className="input-group-prepend">
-              <div className="input-group-text">
-                <FontAwesomeIcon icon="user-alien"/>
-              </div>
-            </div>
-            <input
-              className="form-control"
-              name="profileUserName"
-              type="text"
-              value={values.profileUserName}
-              placeholder="Enter User Name"
-              onChange={handleChange}
-              onBlur={handleBlur}
-            />
-          </div>
-          {
-            errors.profileUserName && touched.profileUserName && (
-              <div className="alert alert-danger">
-                {errors.profileUserName}
-              </div>
-            )
-
-          }
-        </div>
-
         <div className="form-group">
           <label htmlFor="profileEmail">Email Address</label>
           <div className="input-group">
@@ -124,17 +95,39 @@ export const SignUpFormContent = (props) => {
         </div>
 
         <div className="form-group">
-          <button className="btn btn-primary mb-2" type="submit">Submit</button>
-          <button
-            className="btn btn-danger mb-2"
-            onClick={handleReset}
-            disabled={!dirty || isSubmitting}
-          >Reset
-          </button>
+          <label htmlFor="profileUserName">Profile User Name</label>
+          <div className="input-group">
+            <div className="input-group-prepend">
+              <div className="input-group-text">
+                <FontAwesomeIcon icon="dove"/>
+              </div>
+            </div>
+            <input
+              className="form-control"
+              name="profileUserName"
+              type="text"
+              value={values.profileUserName}
+              placeholder="profileUserName"
+              onChange={handleChange}
+              onBlur={handleBlur}
+
+            />
+          </div>
+          {
+            errors.profileUserName && touched.profileUserName && (
+              <div className="alert alert-danger">
+                {errors.profileUserName}
+              </div>
+            )
+          }
         </div>
-        <FormDebugger {...props} />
+        <div className="form-group">
+          <button className="btn btn-primary mb-2" type="submit">Submit</button>
+        </div>
       </form>
-      {status && (<div className={status.type}>{status.message}</div>)}
+      {
+        status && (<div className={status.type}>{status.message}</div>)
+      }
     </>
   )
 };

@@ -3,6 +3,7 @@ import {useDispatch} from 'react-redux'
 import { httpConfig } from '../../utils/httpConfig'
 import { getAuth } from '../../store/auth'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import NavDropdown from 'react-bootstrap/NavDropdown'
 
 export const SignOutComponent = () => {
   const dispatch = useDispatch()
@@ -13,18 +14,15 @@ export const SignOutComponent = () => {
         window.localStorage.removeItem('authorization')
         dispatch(getAuth(null))
         window.location = '/'
-
       }
     })
   }
 
   return(
     <>
-      <div className="dropdown-item sign-out-dropdown">
-        <button className="btn btn-outline-dark" onClick={signOut}>
-          Sign Out&nbsp;&nbsp;<FontAwesomeIcon icon="sign-out-alt" />
+        <button className="btn btn-dark" onClick={signOut}>
+          Log Out&nbsp;&nbsp;<FontAwesomeIcon icon="sign-out-alt" />
         </button>
-      </div>
     </>
   )
 }

@@ -1,11 +1,12 @@
 import React from 'react';
-import {httpConfig} from "../../../utils/httpConfig";
-import {Formik} from "formik";
-import * as Yup from "yup";
-import {SignInFormContent} from "./SignInFormContent";
 import {useDispatch} from "react-redux";
-import { fetchAuth, getAuth } from '../../../store/auth'
+import * as Yup from "yup";
 import * as jwtDecode from 'jwt-decode'
+import {SignInFormContent} from "./SignInFormContent";
+import {httpConfig} from "../../../utils/httpConfig";
+import { getAuth } from '../../../store/auth'
+import { Formik } from 'formik'
+
 
 
 
@@ -40,6 +41,7 @@ export const SignInForm = () => {
           resetForm();
           let jwtToken = jwtDecode(reply.headers["authorization"])
           dispatch(getAuth(jwtToken))
+          window.location = '/'
         }
         setStatus({message, type});
       });
@@ -57,4 +59,3 @@ export const SignInForm = () => {
     </>
   )
 };
-

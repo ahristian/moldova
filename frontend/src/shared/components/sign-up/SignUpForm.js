@@ -3,7 +3,7 @@ import {httpConfig} from "../../../utils/httpConfig";
 import * as Yup from "yup";
 import {Formik} from "formik";
 
-import {SignUpFormContent} from "./SignUpFormContent";
+import {SignUpFormContent} from "./SignUpFormContent.js";
 
 export const SignUpForm = () => {
   const signUp = {
@@ -14,7 +14,6 @@ export const SignUpForm = () => {
   };
 
   const [status, setStatus] = useState(null);
-
   const validator = Yup.object().shape({
     profileEmail: Yup.string()
       .email("email must be a valid email")
@@ -26,17 +25,18 @@ export const SignUpForm = () => {
       .required("Password Confirm is required")
       .min(8, "Password must be at least eight characters"),
     profileUserName: Yup.string()
-      .required("User Name is required")
-      .min(4, "User Name must be at least four characters"),
+      .min(1, "User Name is required")
+      .max(32, "User Name is to long")
   });
 
   const submitSignUp = (values, {resetForm, setStatus}) => {
+    console.log(values)
     httpConfig.post("/apis/sign-up/", values)
       .then(reply => {
           let {message, type} = reply;
 
           if(reply.status === 200) {
-            resetForm();
+           // resetForm();
           }
           setStatus({message, type});
         }
