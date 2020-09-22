@@ -28,17 +28,17 @@ export const Profile = ({match}) => {
         <Container>
           <Row>
             <Col>
-              {profile && (<h2 className="display-4 text-center">Hello, {profile[0]?.profileUserName}</h2>)}
+              {profile && (<h1 className="display-4 text-center">Hello, {profile[0]?.profileUserName}</h1>)}
             </Col>
           </Row>
           <Row>
             <Col>
-              {profile && (<p>Your email: {profile[0]?.profileEmail}</p>)}
+              {profile && (<p><b>Your email:</b> <em>{profile[0]?.profileEmail}</em></p>)}
             </Col>
           </Row>
           <Row>
             <Col>
-              <p> Your saved destinations in Moldova are:</p>
+              <h2 className="display-5 text-center">Your saved destinations in Moldova are:</h2>
             </Col>
           </Row>
         </Container>
