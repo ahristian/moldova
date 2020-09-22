@@ -18,9 +18,6 @@ export const ProfileCard = (props) => {
           </Card.Body>
         </Card>
       </Nav.Link>
-
-
-
     </>
   )
 }

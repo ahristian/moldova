@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import {  fetchProfileById } from '../store/profile'
 import { fetchSaveByProfileId } from '../store/saved'
 import { ProfileCard } from './ProfileCard'
-import { DestinationElement } from './DestinationElement'
 
 export const Profile = ({match}) => {
   const dispatch = useDispatch()
