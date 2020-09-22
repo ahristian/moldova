@@ -107,7 +107,7 @@ export const SignUpFormContent = (props) => {
               name="profileUserName"
               type="text"
               value={values.profileUserName}
-              placeholder="profileUserName"
+              placeholder="Profile User Name"
               onChange={handleChange}
               onBlur={handleBlur}
 

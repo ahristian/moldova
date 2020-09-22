@@ -29,23 +29,19 @@ export const SignUpForm = () => {
       .max(32, "User Name is to long")
   });
 
-  const submitSignUp = (values, {resetForm, setStatus}) => {
-    console.log(values)
+  const submitSignUp = (values, {setStatus}) => {
+
     httpConfig.post("/apis/sign-up/", values)
       .then(reply => {
           let {message, type} = reply;
-
           if(reply.status === 200) {
-           // resetForm();
           }
           setStatus({message, type});
         }
       );
   };
 
-
   return (
-
     <Formik
       initialValues={signUp}
       onSubmit={submitSignUp}
