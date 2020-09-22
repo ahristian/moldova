@@ -9,7 +9,7 @@ export const ProfileCard = (props) => {
   return (
     <>
       <Nav.Link href={`/destinations/${save?.destinationId}`}>
-        <Card className="destinationCardElement mx-3 my-3"  >
+        <Card className="destinationCardElement mx-2 my-2"  >
           <img src={save.destinationImage}  alt={save.destinationTitle}/>
           <Card.Body>
             <Card.Title className="destination-title">
