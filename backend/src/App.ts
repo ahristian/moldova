@@ -12,6 +12,7 @@ import passport = require('passport');
 import {SignOutRoute} from './routes/sign-out.route';
 import {SignInRouter}  from './routes/sign-in.route';
 import SignupRoute from './routes/sign-up.route';
+import helmet from "helmet/dist";
 
 
 // The following class creates the app and instantiates the server
@@ -47,6 +48,7 @@ export class App {
 
         this.app.use(morgan('dev'));
         this.app.use(express.json());
+        this.app.use(helmet());
         this.app.use(session(sessionConfig));
         this.app.use(passport.initialize());
         this.app.use(passport.session());

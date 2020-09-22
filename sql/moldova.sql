@@ -15,7 +15,6 @@ CREATE TABLE profile (
                         PRIMARY KEY (profileId)
 );
 
-INSERT INTO profile (profileId, profileActivationToken, profileEmail, profileHash, profileUserName) VALUES (UUID_TO_BIN('b85b870a-e099-4bf0-b7c5-f0e311e0d862'), '86cf855e0d46e2435eda674df725b6ba', 'hristian@gmail.com', '$argon2id$v=19$m=65536,t=3,p=1$/z0bIUc60QkXCpvEcJlhjA$zE4VS9fm//xpYAP77yftEGG1NeYys0EsTK7oa7ce7ff', 'TestUser');
 CREATE TABLE destination (
                        destinationId BINARY(16) NOT NULL,
                        destinationContact VARCHAR(550) NOT NULL,
@@ -57,5 +56,3 @@ CREATE TABLE `save` (
                         FOREIGN KEY(saveProfileId) REFERENCES profile(profileId),
                         PRIMARY KEY(saveDestinationId, saveProfileId)
 );
-INSERT INTO `save` (saveDestinationId, saveProfileId) VALUES (UUID_TO_BIN('1050a0aa-b318-437e-aec1-03eb0022eb2d'), UUID_TO_BIN('b85b870a-e099-4bf0-b7c5-f0e311e0d862'));
-
