@@ -13,13 +13,13 @@ export const DestinationCard = ({destination}) => {
 
 
   const clickLike = () => {
-    setColorState('Saved')
-    setColor("red")
     httpConfig.post("/apis/save/", {saveDestinationId: destination.destinationId})
       .then(reply => {
           let {message, type} = reply
           if(reply.status === 200) {
             dispatch(getAllDestinations())
+            setColorState('Saved')
+            setColor("red")
           }
         let info = reply.message
         if (info === "Please, Sign up or Log In in order to save your destinations.")
@@ -37,13 +37,14 @@ export const DestinationCard = ({destination}) => {
           <img src={destination.destinationImage}  alt={destination.destinationTitle}/>
         </Link>
         <Card.Body>
+          <Link to={`/destinations/${destination?.destinationId}`}>
         <Card.Title className="destination-title">
             {destination.destinationTitle}
          </Card.Title>
+          </Link>
         </Card.Body>
           <Button onClick={clickLike} style={{backgroundColor: color}} >{colorState} </Button>
       </Card>
-
 
     </>
   )
