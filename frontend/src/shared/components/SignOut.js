@@ -3,7 +3,6 @@ import {useDispatch} from 'react-redux'
 import { httpConfig } from '../../utils/httpConfig'
 import { getAuth } from '../../store/auth'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import NavDropdown from 'react-bootstrap/NavDropdown'
 
 export const SignOutComponent = () => {
   const dispatch = useDispatch()

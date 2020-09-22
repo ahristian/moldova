@@ -23,8 +23,6 @@ export const SignInForm = () => {
       .min(8, "Password must be at least eight characters")
   });
 
-
-  //the initial values object defines what the request payload is.
   const signIn = {
     profileEmail: "",
     profilePassword: ""

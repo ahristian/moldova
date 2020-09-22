@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
-import {httpConfig} from "../../../utils/httpConfig";
+import React, { useState } from 'react';
+import { httpConfig } from "../../../utils/httpConfig";
 import * as Yup from "yup";
-import {Formik} from "formik";
-
-import {SignUpFormContent} from "./SignUpFormContent.js";
+import { Formik } from "formik";
+import { SignUpFormContent } from "./SignUpFormContent.js";
 
 export const SignUpForm = () => {
   const signUp = {
@@ -34,9 +33,10 @@ export const SignUpForm = () => {
     httpConfig.post("/apis/sign-up/", values)
       .then(reply => {
           let {message, type} = reply;
-          if(reply.status === 200) {
+          if (reply.status === 200) {
           }
           setStatus({message, type});
+          window.location = '/'
         }
       );
   };
