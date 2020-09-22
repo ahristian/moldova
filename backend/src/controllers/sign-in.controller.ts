@@ -40,7 +40,7 @@ export async function signInController(request: Request, response: Response, nex
                         authorization
                     });
 
-                    return response.json({status: 200, data: null, message: "sign in successful"})
+                    return response.json({status: 200, data: null, message: "Log In successful"})
                 };
 
 
