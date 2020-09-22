@@ -144,13 +144,18 @@
     margin: 3rem 1rem 5rem;
     text-align: center;
     font-size: 18px;
-
+}
+.destinationCard a {
+    color: #212121;
+    text-decoration: none;
 }
 .profileDestinationCard {
     margin: 1rem 1rem 5rem;
     text-align: center;
 }
-
+.profile h1 {
+    margin: 3rem;
+}
 .destinationCardElement {
     border: 1px solid #4b4a49;
     -moz-border-radius-bottomright: 0.5rem ;
