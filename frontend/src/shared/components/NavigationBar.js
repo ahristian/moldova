@@ -42,7 +42,7 @@ export const NavigationBar = (props) => {
   return (
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" >
-        <Navbar.Brand href="#home">MOLDOVA TRAVEL GUIDE</Navbar.Brand>
+        <Navbar.Brand href="/home">MOLDOVA TRAVEL GUIDE</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end pl-2 mr-5">
           <Nav >
