@@ -1,6 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit'
 import {httpConfig} from "../utils/httpConfig"
-import {fetchAuth} from "./auth";
 
 const savedSlice = createSlice({
   name: "save",
