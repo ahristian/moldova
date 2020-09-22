@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card'
-import Nav from 'react-bootstrap/Nav'
 import { getAllDestinations } from '../store/destination'
 import {httpConfig} from "../utils/httpConfig"
 import Button from 'react-bootstrap/Button'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import Modal from 'react-bootstrap/Modal'
-import { SignInForm } from '../shared/components/sign-in/SignInForm'
-import Alert from 'react-bootstrap/Alert'
 
 export const DestinationCard = ({destination}) => {
   const dispatch = useDispatch()
+  const [colorState, setColorState] = useState('Save');
+  const [color, setColor] = useState("primary");
+
 
   const clickLike = () => {
-
+    setColorState('Saved')
+    setColor("red")
     httpConfig.post("/apis/save/", {saveDestinationId: destination.destinationId})
       .then(reply => {
           let {message, type} = reply
@@ -22,7 +22,7 @@ export const DestinationCard = ({destination}) => {
             dispatch(getAllDestinations())
           }
         let info = reply.message
-        if (info === "Please Log in")
+        if (info === "Please, Sign up or Log In in order to save your destinations.")
         alert(` ${info}`);
           }
       )
@@ -41,7 +41,7 @@ export const DestinationCard = ({destination}) => {
             {destination.destinationTitle}
          </Card.Title>
         </Card.Body>
-          <Button onClick={clickLike} className="buttonSave">Save </Button>
+          <Button onClick={clickLike} style={{backgroundColor: color}} >{colorState} </Button>
       </Card>
 
 
