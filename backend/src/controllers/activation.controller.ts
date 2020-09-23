@@ -16,8 +16,6 @@ export async function activationController(request: Request, response: Response,
         });
 
         const activationSucceeded = async (profile: Profile) => {
-            const updatedProfile = {...profile, profileActivationToken: null}
-            await updateProfile(updatedProfile)
             return response.json({
                 status: 200,
                 data: null,

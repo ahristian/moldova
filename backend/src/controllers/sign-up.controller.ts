@@ -14,8 +14,7 @@ export async function signUpProfileController(request: Request, response: Respon
         const {profileEmail, profileUserName, profilePassword} = request.body;
         const profileHash = await setHash(profilePassword);
         const profileActivationToken = setActivationToken();
-        const basePath = `${request.protocol}://${request.get('host')}${request.originalUrl}/activation/${profileActivationToken}`
-        console.log(profileActivationToken)
+        const basePath = `${request.protocol}://${request.get('host')}${request.originalUrl}activation/${profileActivationToken}`
 
         const message = `<h2>Welcome to Moldova Travel Guide.</h2>
 <p>In order to start saving destinations, you must confirm your account </p>
@@ -25,7 +24,7 @@ export async function signUpProfileController(request: Request, response: Respon
         const mailgunMessage = {
             from: `Mailgun Sandbox <postmaster@${process.env.MAILGUN_DOMAIN}>`,
             to: profileEmail,
-            subject: "One step closer to Sticky Head -- Account Activation",
+            subject: "One step closer to activate -- Account Activation",
             text: 'Test email text',
             html: message
         }
