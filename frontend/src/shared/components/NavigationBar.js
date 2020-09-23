@@ -65,7 +65,7 @@ export const NavigationBar = (props) => {
                 <>
               <NavDropdown.Item href="" onClick={handleShow2}>
                 <Button className="btn btn-dark" onClick={handleShow}>
-                  Sign Up &nbsp;&nbsp;<FontAwesomeIcon icon="user"/>
+                  Sign Up &nbsp;<FontAwesomeIcon icon="user"/>
                 </Button>
               </NavDropdown.Item>
               <NavDropdown.Item href="" onClick={handleShow}>
