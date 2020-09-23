@@ -116,7 +116,7 @@ export const SignUpFormContent = (props) => {
           }
         </div>
         <div className="form-group">
-          <button className="btn btn-primary mb-2" type="submit">Submit</button>
+          <button className="btn btn-primary mb-2 mx-2" type="submit">Submit</button>
         </div>
       </form>
       {

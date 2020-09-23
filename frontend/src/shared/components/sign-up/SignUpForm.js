@@ -29,14 +29,13 @@ export const SignUpForm = () => {
   });
 
   const submitSignUp = (values, {setStatus}) => {
-
     httpConfig.post("/apis/sign-up/", values)
       .then(reply => {
           let {message, type} = reply;
           if (reply.status === 200) {
           }
-          setStatus({message, type});
-          window.location = '/'
+        setStatus({message, type});
+
         }
       );
   };
