@@ -7,9 +7,6 @@ import {httpConfig} from "../../../utils/httpConfig";
 import { getAuth } from '../../../store/auth'
 import { Formik } from 'formik'
 
-
-
-
 export const SignInForm = () => {
 
   const dispatch = useDispatch()
