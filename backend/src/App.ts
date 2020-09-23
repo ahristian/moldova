@@ -13,7 +13,7 @@ import {SignOutRoute} from './routes/sign-out.route';
 import {SignInRouter}  from './routes/sign-in.route';
 import SignupRoute from './routes/sign-up.route';
 import helmet from "helmet/dist";
-
+import bodyParser from 'body-parser';
 
 // The following class creates the app and instantiates the server
 export class App {
@@ -48,11 +48,12 @@ export class App {
 
         this.app.use(morgan('dev'));
         this.app.use(express.json());
+        this.app.use(bodyParser.urlencoded({ extended: false, limit: '5mb' }));
+        this.app.use(bodyParser.json());
         this.app.use(helmet());
         this.app.use(session(sessionConfig));
         this.app.use(passport.initialize());
         this.app.use(passport.session());
-
     }
 
 
