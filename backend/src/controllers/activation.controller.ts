@@ -3,11 +3,13 @@ import {selectProfileByProfileActivationToken} from "../../utils/profile/selectP
 import {Profile} from "../../utils/interfaces/Profile";
 import {updateProfile} from "../../utils/profile/updateProfile";
 
+
 export async function activationController(request: Request, response: Response, nextFunction: NextFunction) {
     const {activation} = request.params
     try {
 
         const profile = await selectProfileByProfileActivationToken(activation)
+
         const activationFailed = () => response.json({
             status: 400,
             data: null,
