@@ -29,7 +29,9 @@ export async function signInController(request: Request, response: Response, nex
                 });
 
                 const signInSuccessful = () => {
-
+                    if(passportUser.profileActivationToken !== null) {
+                        signInFailed("please activate your account")
+                    }
                     if (request.session) {
                         request.session.profile = passportUser;
                         request.session.jwt = authorization;
