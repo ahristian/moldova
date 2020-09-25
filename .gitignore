@@ -7,9 +7,7 @@ moldova.env
 */.pnp
 */.pnp.js
 **/node_modules
-*/store
-*/ui
-*/utils
+
 */setupProxy.js
 # testing
 */coverage
