@@ -24,7 +24,7 @@ export async function signUpProfileController(request: Request, response: Respon
         const mailgunMessage = {
             from: `Mailgun Sandbox <postmaster@${process.env.MAILGUN_DOMAIN}>`,
             to: profileEmail,
-            subject: "One step closer to activate -- Account Activation",
+            subject: "Profile activation to save your destinations for Moldova -- Account Activation",
             text: 'Test email text',
             html: message
         }
@@ -37,7 +37,8 @@ export async function signUpProfileController(request: Request, response: Respon
             profileUserName
         };
 
-     await insertProfile(profile)
+
+        const result = await insertProfile(profile)
 
         const emailComposer: MailComposer = new MailComposer(mailgunMessage)
 
@@ -52,7 +53,7 @@ export async function signUpProfileController(request: Request, response: Respon
 
             const status: Status = {
                 status: 200,
-                message: "Profile successfully created please Log In.",
+                message: "Profile successfully created please check your email.",
                 data: null
             };
             mg.messages().sendMime(compiledEmail, (sendError: any, body: any) => {
@@ -62,7 +63,10 @@ export async function signUpProfileController(request: Request, response: Respon
                 }
                 return response.json(status);
             });
+
+
         })
+
     } catch (error) {
         const status: Status = {
             status: 400,
