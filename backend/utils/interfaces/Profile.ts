@@ -1,6 +1,6 @@
 export interface Profile {
     profileId : string|null,
-    profileActivationToken : string,
+    profileActivationToken : string | null,
     profileEmail: string,
     profileHash: string,
     profileUserName: string
