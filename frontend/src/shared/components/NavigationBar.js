@@ -78,7 +78,7 @@ export const NavigationBar = (props) => {
               {auth !== null && (
                 <>
                   <NavDropdown.Item>
-                    <SignOutComponent />
+                      <SignOutComponent />
                   </NavDropdown.Item>
                 </>
               )}
