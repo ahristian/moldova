@@ -20,7 +20,6 @@ export async function signUpProfileController(request: Request, response: Respon
 <p>In order to start saving destinations, you must confirm your account </p>
 <p><a href="${basePath}">${basePath}</a></p>
 `
-
         const mailgunMessage = {
             from: `Mailgun Sandbox <postmaster@${process.env.MAILGUN_DOMAIN}>`,
             to: profileEmail,
@@ -44,8 +43,6 @@ export async function signUpProfileController(request: Request, response: Respon
 
         emailComposer.compile().build((error: any, message: Buffer) => {
             const mg = mailgun({apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN});
-
-            console.log(message.toString("ascii"))
             const compiledEmail = {
                 to: profileEmail,
                 message: message.toString("ascii")
