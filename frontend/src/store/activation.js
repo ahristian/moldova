@@ -1,20 +1,21 @@
+/*
 import {createSlice} from '@reduxjs/toolkit'
 import {httpConfig} from "../utils/httpConfig"
 
-const destinationsPhotoSlice = createSlice({
-  name: "destinationsPhotos",
+const activationSlice = createSlice({
+  name: "profileActivationToken",
   initialState: [],
   reducers: {
-    getAllDestinationPhotos: (destinationsPhotos, action) => {
+    getActivation: (profileActivationToken, action) => {
       const {payload} = action
       return payload
     }
   }
 })
 
-export const {getAllDestinationPhotos} = destinationsPhotoSlice.actions
-export const fetchDestinationPhotosByDestinationId = (destinationId) => async dispatch => {
-  const {data} = await httpConfig(`/apis/destinations/${destinationId}`);
-  dispatch(getAllDestinationPhotos(data))
+export const { getActivation} = activationSlice.actions
+export const fetchActivation = (profileActivationToken) => async dispatch => {
+  const {data} = await httpConfig(`/apis/sign-up/activation/${profileActivationToken}`);
+  dispatch(getActivation(data))
 }
-export default destinationsPhotoSlice.reducer
+export default activationSlice.reducer*/
