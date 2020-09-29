@@ -15,7 +15,7 @@ export const FoodCard = (props) => {
           trigger={<input type="image" src={food.foodImageUrl} alt={food.foodTitle}/>
           }
           modal closeOnDocumentClick>
-          <img style={{height: "40vw", object: "cover"}} alt={food.foodTitle} src={food.foodImageUrl}/>
+          <img style={{height: "34vw"}} alt={food.foodTitle} src={food.foodImageUrl}/>
         </Popup>
 
         <Card.Body>
