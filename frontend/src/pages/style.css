@@ -27,7 +27,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: 0.6s;
+    transition: 0.9s;
     height: 100vh;
 }
 
@@ -46,6 +46,13 @@
 }
 
 /*  section Main Map */
+.map {
+    margin-bottom: 3rem;
+}
+.map-icon {
+    font-size: 2.5rem;
+    color: #17A2B8;
+}
 .main-map h2 {
     margin: 3rem 0 4rem;
     text-align: center;
@@ -54,12 +61,7 @@
 .main-map {
     padding: 0 1rem;
     text-align: justify;
-    margin-bottom: 6rem;
-}
-
-.main-map img {
-    padding-left: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 /* section-mainPicture */
@@ -86,7 +88,6 @@
 .section-mainWhen img {
     border: 1px solid black;
     width: 110%;
-
 }
 
 .section-mainWhen {
@@ -141,7 +142,7 @@
 }
 
 .destinationCard {
-    margin: 3rem 1rem 5rem;
+    margin: 3rem 0 5rem;
     text-align: center;
     font-size: 18px;
 }
@@ -158,6 +159,7 @@
 }
 .destinationCardElement {
     border: 1px solid #4b4a49;
+    width: 25rem;
     -moz-border-radius-bottomright: 0.5rem ;
     -moz-border-radius-bottomleft: 0.5rem ;
 }
@@ -219,6 +221,7 @@
 }
 
 .foodCardElement {
+    width: 25rem;
     border: 1px solid #323232;
     border-radius: 0 0 0.5rem 0.5rem;
 }
@@ -254,6 +257,7 @@
 }
 
 .traditionCardElement {
+    width: 25rem;
     border: 1px solid #323232;
     border-radius: 0 0 0.5rem 0.5rem;
 }
@@ -270,9 +274,12 @@
     object-fit: cover;
 }
 
+
 .traditionCardElement p {
     font-size: 16px;
 }
+
+
 
 /****************************************   END  ****************************************************/
 
@@ -293,13 +300,10 @@
     .text-cover {
         font-size: 35px;
         text-align: left;
-        margin: 1.6rem 0;
-        padding: 0;
+        margin: 2rem 0;
+        padding: 1rem;
     }
 
-    .main-map p {
-        margin-left: 5rem;
-    }
 
     .section-mainPicture p {
         padding: 1rem 1rem;
@@ -314,13 +318,13 @@
     }
 
     .section-mainWhen {
-        margin: 0 1rem 5rem;
+        margin: 3rem 2rem;
         border: none;
         text-align: justify;
     }
 
     .section-mainWhen img {
-        margin-top: 10rem;
+        margin-top: 3rem;
         border: 1px solid black;
         width: 100%;
     }
@@ -340,7 +344,18 @@
         height: 5vw;
         text-align: center;
     }
+    .traditionCardElement {
+        width: 40px;
+        border: 1px solid #323232;
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+    .traditionCardElement input {
+        height: 40vw;
+    }
 
+    .foodCardElement input {
+        height: 40vw;
+    }
     .footer-p1 {
         text-align: left;
         padding-top: 5px;
@@ -425,13 +440,17 @@
 
     .destinationCardElement img {
         width: 100%;
-        height: 40vw;
+        height: 60vw;
         object-fit: cover;
         padding-bottom: 1rem;
     }
 
-    .destinationCardElement {
-        width: 18rem;
+    .traditionCardElement input {
+        height: 60vw;
+        object-fit: cover;
+    }
+    .foodCardElement input{
+        height: 60vw;
     }
 }
 
