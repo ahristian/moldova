@@ -4,7 +4,7 @@ import { getAllDestinations } from '../store/destination'
 import {httpConfig} from "../utils/httpConfig"
 import Button from 'react-bootstrap/Button'
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export const DestinationCard = ({destination}) => {
   const dispatch = useDispatch()
@@ -32,7 +32,7 @@ export const DestinationCard = ({destination}) => {
   return (
     <>
 
-      <Card className="destinationCardElement mx-3 my-3"  >
+      <Card className="destinationCardElement mx-3 my-2">
         <Link to={`/destinations/${destination?.destinationId}`}>
           <img src={destination.destinationImage}  alt={destination.destinationTitle}/>
         </Link>
@@ -44,6 +44,7 @@ export const DestinationCard = ({destination}) => {
           </Link>
         </Card.Body>
           <Button onClick={clickLike} style={{backgroundColor: color}} >{colorState} </Button>
+
       </Card>
 
     </>
