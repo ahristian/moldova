@@ -32,7 +32,7 @@ export const Traditions = () => {
       </section>
       <section className="traditionCard">
         <Container>
-          <Row md={8} className="justify-content-md-center">
+          <Row lg={8} className="justify-content-md-center">
             {traditions.map(tradition => <TraditionCard tradition={tradition} key={tradition.traditionId}/>)}
           </Row>
         </Container>
