@@ -8,18 +8,20 @@ const {tradition} = props
 
   return (
     <>
-      <Card className="traditionCardElement mx-3 my-3" style={{width: '25rem'}} >
+      <Card className="traditionCardElement mx-3 my-3" >
         <Popup
           trigger={<input type="image" src={tradition.traditionImageUrl} alt={tradition.traditionTitle}/>}
           modal closeOnDocumentClick>
-          <img style={{height: "40vw", object: "cover"}} src={tradition.traditionImageUrl} alt={tradition.traditionTitle}/>
+            <div className="modal-pop">
+          <img style={{height: "34vw"}} src={tradition.traditionImageUrl} alt={tradition.traditionTitle}/>
+            </div>
         </Popup>
         <Card.Body>
           <Card.Title className="text-center">
             {tradition.traditionTitle}
           </Card.Title>
           <Card.Text>
-            <p>{tradition.traditionContent}</p>
+           {tradition.traditionContent}
           </Card.Text>
         </Card.Body>
       </Card>
