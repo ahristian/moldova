@@ -61,7 +61,7 @@ export const Home = () => {
           </Row>
           <Row>
             <Col md={{span: 8, offset: 3}} sm={8}>
-              <Button href="#destination" variant="outline-transparent text-cover">What can I visit in Moldova?</Button>
+              <Button href="/destinations" variant="outline-transparent text-cover">What can I visit in Moldova?</Button>
             </Col>
           </Row>
           <Row>

@@ -20,7 +20,6 @@ export const Profile = ({match}) => {
   const profile = useSelector(state => state.profile ? state.profile : []);
   const save = useSelector( state => state.save ? state.save : []);
 
-  console.table(save)
   return (
     <>
       <section className="profile">

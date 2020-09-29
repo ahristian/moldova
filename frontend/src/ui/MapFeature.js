@@ -3,7 +3,6 @@ import {Marker} from "react-mapbox-gl";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export const MapFeature = ({point}) => {
-  console.log(point.lat);
   return (
     <>
       <Marker
