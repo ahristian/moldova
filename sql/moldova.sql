@@ -18,10 +18,12 @@ CREATE TABLE profile (
 CREATE TABLE destination (
                        destinationId BINARY(16) NOT NULL,
                        destinationContact VARCHAR(550) NOT NULL,
+                       destinationLat DECIMAL(8,5) NOT NULL,
+                       destinationLong DECIMAL(8,5) NOT NULL,
                        destinationDescription VARCHAR(2000) NOT NULL,
                        destinationLocation VARCHAR(250) NOT NULL,
                        destinationTitle VARCHAR(128) NOT NULL,
-                       destinationImage VARCHAR(128) NOT NULL ,
+                       destinationImage VARCHAR(128) NOT NULL,
                        PRIMARY KEY(destinationId)
 );
 
