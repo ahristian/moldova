@@ -10,6 +10,7 @@ import Modal from 'react-bootstrap/Modal'
 import { SignInForm } from './sign-in/SignInForm'
 import { SignUpForm } from './sign-up/SignUpForm'
 import { SignOutComponent } from './SignOut'
+import { Destinations } from '../../pages/Destinations'
 
 
 export const NavigationBar = (props) => {
@@ -47,9 +48,9 @@ export const NavigationBar = (props) => {
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end pl-2 mr-5">
           <Nav >
             <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/destinations">Destinations</Nav.Link>
             <Nav.Link href="/foods">Food</Nav.Link>
             <Nav.Link href="/traditions">Traditions</Nav.Link>
-            <Nav.Link href="/aboutMoldova">About Moldova</Nav.Link>
             <NavDropdown id="basic-nav-dropdown" title="Profile" className="mr-3" >
               {auth !== null && (
                 <>
