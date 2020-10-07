@@ -54,7 +54,7 @@ export const Home = () => {
         <Container fluid className="bg-img" style={{backgroundImage: "url(" + background + ")"}}>
           <Row className="py-2">
             <Col md={{span: 8, offset: 4}} sm={8}>
-              <Nav.Link href="/aboutMoldova">
+              <Nav.Link href="#idMoldova">
                 <Button variant="outline-transparent text-cover text-center">Where is Moldova?</Button>
               </Nav.Link>
             </Col>
@@ -81,6 +81,7 @@ export const Home = () => {
           </Row>
         </Container>
       </header>
+
       <section id="idMoldova" className="main-map">
         <Container>
           <Row>
