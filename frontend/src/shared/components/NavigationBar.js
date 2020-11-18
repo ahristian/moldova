@@ -51,7 +51,7 @@ export const NavigationBar = (props) => {
             <Nav.Link href="/destinations">Destinations</Nav.Link>
             <Nav.Link href="/foods">Food</Nav.Link>
             <Nav.Link href="/traditions">Traditions</Nav.Link>
-            <NavDropdown id="basic-nav-dropdown" title="Profile" className="mr-3" >
+            <NavDropdown id="basic-nav-dropdown" title="Sign Up/Log In" className="mr-3" >
               {auth !== null && (
                 <>
                   <NavDropdown.Item href={`/profile/${auth?.profileId}`}>

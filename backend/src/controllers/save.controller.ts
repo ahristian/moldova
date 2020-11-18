@@ -13,16 +13,12 @@ export async function toggleSaveController(request: Request, response: Response)
 
     try {
         validationResult(request).throw();
-
         const {saveDestinationId} = request.body;
-
         const profile: Profile = request.session?.profile
         const saveProfileId = <string>profile.profileId
-
         const save: Save = {
             saveProfileId,
             saveDestinationId,
-
         }
         const select = await selectSave (save)
         // @ts-ignore
@@ -31,7 +27,6 @@ export async function toggleSaveController(request: Request, response: Response)
         }else{
             const result = await insertSave(save)
         }
-
         const status: Status = {
             status: 200,
             data: null,
