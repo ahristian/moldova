@@ -1,0 +1,138 @@
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('4566d8b0-ed96-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('81694c3c-872a-4d9b-9e88-2b17f2ed66d4'), "/asconi1.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('4566d96e-ed96-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('81694c3c-872a-4d9b-9e88-2b17f2ed66d4'), "/asconi2.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('4566da40-ed96-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('81694c3c-872a-4d9b-9e88-2b17f2ed66d4'), "/asconi3.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('4566dc52-ed96-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('81694c3c-872a-4d9b-9e88-2b17f2ed66d4'), "/asconi4.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('da6f4903-8f15-4ffd-ace5-ba29e6d8f0e6'), 
+UUID_TO_BIN('9d60632c-bd30-451f-bc5f-5fad39da07ad'), "/bender1.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('4566cef6-ed96-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('9d60632c-bd30-451f-bc5f-5fad39da07ad'), "/bender2.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('4566d270-ed96-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('9d60632c-bd30-451f-bc5f-5fad39da07ad'), "/bender3.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('4566d342-ed96-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('46605f32-6bf4-499d-ae05-a3fcff71bbf8'), "/cricova1.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('4566d612-ed96-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('46605f32-6bf4-499d-ae05-a3fcff71bbf8'), "/cricova2.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('4566d702-ed96-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('46605f32-6bf4-499d-ae05-a3fcff71bbf8'), "/cricova3.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('4566d7d4-ed96-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('46605f32-6bf4-499d-ae05-a3fcff71bbf8'), "/cricova4.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('29778460-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('0a596658-5066-4a31-9873-24ace917aca0'), "/dendrari1.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('29778758-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('0a596658-5066-4a31-9873-24ace917aca0'), "/dendrari2.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('297789a6-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('0a596658-5066-4a31-9873-24ace917aca0'), "/dendrari3.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('29778a8c-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('879ae8b6-5b90-43bc-8b38-2fbe0ed55b86'), "/manuc1.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('29778b5e-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('879ae8b6-5b90-43bc-8b38-2fbe0ed55b86'), "/manuc2.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('29778d66-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('879ae8b6-5b90-43bc-8b38-2fbe0ed55b86'), "/manuc3.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('29778f28-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('1050a0aa-b318-437e-aec1-03eb0022eb2d'), "/milesti1.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('29779068-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('1050a0aa-b318-437e-aec1-03eb0022eb2d'), "/milesti2.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('29779130-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('1050a0aa-b318-437e-aec1-03eb0022eb2d'), "/milesti3.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('2977927a-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('1050a0aa-b318-437e-aec1-03eb0022eb2d'), "/milesti4.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('29779374-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('dc025090-c23d-4c2d-b8b7-3895d697dc48'), "/mimi1.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('297794c8-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('dc025090-c23d-4c2d-b8b7-3895d697dc48'), "/mimi2.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('29779590-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('dc025090-c23d-4c2d-b8b7-3895d697dc48'), "/mimi3.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('297796bc-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('87368ccf-8f83-4668-a750-2fff1895b871'), "/ovechi1.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('29779af4-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('87368ccf-8f83-4668-a750-2fff1895b871'), "/ovechi2.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('29779bbc-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('87368ccf-8f83-4668-a750-2fff1895b871'), "/ovechi4.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('29779e00-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('94ea92c8-7073-47c9-8935-496eb2cc3b93'), "/saharna1.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('29779f04-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('94ea92c8-7073-47c9-8935-496eb2cc3b93'), "/saharna2.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('2977a094-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('94ea92c8-7073-47c9-8935-496eb2cc3b93'), "/saharna3.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('2977a1ac-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('94ea92c8-7073-47c9-8935-496eb2cc3b93'), "/saharna4	.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('2977a332-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('542163cb-97d0-4f24-8693-f61ec0e687bb'), "/sat1.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('2977a440-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('542163cb-97d0-4f24-8693-f61ec0e687bb'), "/sat2.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('2977a5bc-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('ea93a0ab-a006-4c8d-a627-ecd6365928ba'), "/soroca1.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('2977a76a-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('ea93a0ab-a006-4c8d-a627-ecd6365928ba'), "/soroca2.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('2977a940-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('ea93a0ab-a006-4c8d-a627-ecd6365928ba'), "/soroca4.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('2977aa9e-ee5e-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('b5f5c307-4ae7-41a6-86d0-9ee0d7d403a2'), "/tipova1.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('56a024f8-ee61-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('b5f5c307-4ae7-41a6-86d0-9ee0d7d403a2'), "/tipova2.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('56a02732-ee61-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('b5f5c307-4ae7-41a6-86d0-9ee0d7d403a2'), "/tipova3.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('56a028ea-ee61-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('3296a27b-fe6a-4482-bd1a-8ab816e7c448'), "/valea1.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('56a029ee-ee61-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('3296a27b-fe6a-4482-bd1a-8ab816e7c448'), "/valea2.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('56a02ac0-ee61-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('3296a27b-fe6a-4482-bd1a-8ab816e7c448'), "/valea3.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('56a02b88-ee61-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('3296a27b-fe6a-4482-bd1a-8ab816e7c448'), "/valea4.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('56a02dcc-ee61-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('872936b4-313c-4b6f-af02-305ac0977a4e'), "/vart1.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('56a02e9e-ee61-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('872936b4-313c-4b6f-af02-305ac0977a4e'), "/vart2.jpg");
+
+INSERT INTO destinationPhoto (destinationPhotoId, destinationPhotoDestinationId,  destinationPhotoUrl) VALUES (UUID_TO_BIN('56a02f5c-ee61-11ea-adc1-0242ac120002'), 
+UUID_TO_BIN('872936b4-313c-4b6f-af02-305ac0977a4e'), "/vart3.jpg");

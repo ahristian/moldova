@@ -5,15 +5,15 @@ import ProfileRoutes from './routes/profile.routes';
 import TraditionRoutes from './routes/tradition.routes';
 import SaveRoutes from './routes/save.routes';
 import FoodRoutes from './routes/food.routes';
-import IndexRoutes from './routes/index.routes';
-const session = require("express-session");
-const MemoryStore = require('memorystore')(session);
 import passport = require('passport');
 import {SignOutRoute} from './routes/sign-out.route';
 import {SignInRouter}  from './routes/sign-in.route';
 import SignupRoute from './routes/sign-up.route';
 import helmet from "helmet/dist";
 import bodyParser from 'body-parser';
+import IndexRoutes from './routes/index.routes';
+const session = require("express-session");
+const MemoryStore = require('memorystore')(session);
 
 // The following class creates the app and instantiates the server
 export class App {

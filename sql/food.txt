@@ -1,0 +1,12 @@
+ INSERT INTO food (foodId, foodTitle, foodContent, foodImageUrl) VALUES (UUID_TO_BIN('46444c3c-872a-4d9b-9e88-2b17f2ed66d4'),
+ 'Mamaliga', 'Mamaliga is known as national special food in Moldova served with steam meat, cottage cheese and sour cream.', "/mamaliga.jpg");
+
+ INSERT INTO food (foodId, foodTitle, foodContent, foodImageUrl) VALUES (UUID_TO_BIN('990b6d69-b4a9-4422-82af-732a5a1186c4'), "Moldavian Stuffed Cabbage (Sarmale)", "This recipe for Romanian stuffed cabbage, or sarmale, features ground pork, sauerkraut, tomatoes, and dill. Sarmale is enjoyed year-round in Moldova but especially for holidays like Christmas and Easter. Stuffed cabbage is a traditional dish not only in Moldova but across all of Eastern Europe.", "/sarmale.png");
+
+ INSERT INTO food (foodId, foodTitle, foodContent, foodImageUrl) VALUES (UUID_TO_BIN('fefc63f3-9747-4b89-a9c4-30b86771fcca'), "Placinte Recipe (Moldavian Brinza)", "Placinte is a round flat bread that is commonly stuffed with cheese. It is recognized in the Romanian, Ukrainian and Moldovan Culture.", "/placinte.jpg");
+
+ INSERT INTO food (foodId, foodTitle, foodContent, foodImageUrl) VALUES (UUID_TO_BIN('db52e42f-ee51-4299-9141-3c704d86807e'), "Olivier", "Olivier Potato Salad is a classic, homemade Russian potato salad recipe that is easy to prepare. Every bite is a mixture of different ingredients, all chopped into small pieces to deliver that rich outburst of flavors.", "/olivie.jpg");
+
+ INSERT INTO food (foodId, foodTitle, foodContent, foodImageUrl) VALUES (UUID_TO_BIN('f623d0a7-2c74-4049-b6c2-1fa02bb9f56c'), "Moldavian Garlic Chicken Aspic (Piftie sau Racitura)", "This dish, whatever you choose to call it, is a staple in Romanian houses on important holidays (like Christmas and Easter) and throughout the cold season.", "/racituri.jpg");
+
+ 
